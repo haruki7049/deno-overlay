@@ -7,7 +7,7 @@ self: super:
 
       src = super.fetchzip {
         url = "https://github.com/denoland/deno/releases/download/v${version}/deno-x86_64-unknown-linux-gnu.zip";
-        hash = "";
+        hash = "sha256-i/y5T8y4RABYb2b7qAF2eP70tSPeBGtRQVL/zuY2+Ik=";
       };
 
       installPhase = ''
