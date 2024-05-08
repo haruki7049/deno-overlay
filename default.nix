@@ -35,6 +35,14 @@ self: super: {
         wrapProgram $out/bin/deno \
           --set LD_LIBRARY_PATH ${libraries}
       '';
+
+      meta = with super.lib; {
+        description = "A secure runtime for JavaScript and TypeScript";
+        homepage = "https://deno.land/";
+        mainProgram = "deno";
+        platforms = [ "x86_64-linux" ];
+        license = licenses.mit;
+      };
     };
   };
 }
