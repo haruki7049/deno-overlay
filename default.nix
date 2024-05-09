@@ -1,14 +1,42 @@
 self: super: {
-  deno = {
-    "1.42.0" = super.stdenv.mkDerivation rec {
-      pname = "deno";
-      version = "1.42.0";
+  deno = let
+    pname = "deno";
+    inherit (super.stdenv.hostPlatform) system;
 
-      src = super.fetchzip {
-        url =
-          "https://github.com/denoland/deno/releases/download/v${version}/deno-x86_64-unknown-linux-gnu.zip";
-        hash = "sha256-i/y5T8y4RABYb2b7qAF2eP70tSPeBGtRQVL/zuY2+Ik=";
-      };
+    releases = builtins.fromJSON (builtins.readFile ./sources.json);
+    assets = builtins.concatMap (release: release.assets) releases;
+    downloadURLs = builtins.map (asset: asset.browser_download_url) assets;
+
+    x86_64-linuxURLs =
+      builtins.filter (link: super.lib.strings.hasInfix "deno-x86_64-unknown-linux-gnu" link)
+      downloadURLs;
+    aarch64-linuxURLs =
+      builtins.filter (link: super.lib.strings.hasInfix "deno-aarch64-unknown-linux-gnu" link)
+      downloadURLs;
+    x86_64-linuxUrlFetcher = version:
+      builtins.head
+      (builtins.filter (url: super.lib.strings.hasInfix version url)
+        x86_64-linuxURLs);
+    aarch64-linuxUrlFetcher = version:
+      builtins.head
+      (builtins.filter (url: super.lib.strings.hasInfix version url)
+        aarch64-linuxURLs);
+
+    mkBinaryInstall = version: x86_64-linuxHash: aarch64-linuxHash: super.stdenv.mkDerivation rec {
+      inherit pname version;
+
+      src = {
+        x86_64-linux = super.fetchurl {
+          url = x86_64-linuxUrlFetcher version;
+          hash = x86_64-linuxHash;
+        };
+        aarch64-linux = super.fetchurl {
+          url = aarch64-linuxUrlFetcher version;
+          hash = aarch64-linuxHash;
+        };
+      }.${system};
+
+      sourceRoot = ".";
 
       nativeBuildInputs =
         [ super.autoPatchelfHook super.makeWrapper super.unzip super.libgcc ];
@@ -44,5 +72,7 @@ self: super: {
         license = licenses.mit;
       };
     };
+  in {
+    "1.42.0" = mkBinaryInstall "1.42.0" "sha256-3jbacxIAeBW/V2T7eN0S94OMtdiXow55FUt0idI2Oy8=" "";
   };
 }
