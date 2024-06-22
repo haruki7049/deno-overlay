@@ -30,4 +30,4 @@ if __name__ == "__main__":
     repo = "deno"  # リポジトリ名
 
     releases = get_all_releases(owner, repo)
-    print(json.dump(releases))
+    print(json.dumps(releases))
