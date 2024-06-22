@@ -10,7 +10,7 @@ if [[ -z $1 ]]; then
     echo "Process exited with code 1."
     exit 1
 elif [[ -f $1 ]]; then
-    download_urls=$(cat $1 | grep browser_download_url | gawk '{gsub(/ /, "\n"); print}' | uniq | grep x | grep linux)
+    download_urls=$(cat $1 | grep browser_download_url | gawk '{gsub(/ /, "\n"); print}' | uniq | grep deno-x86_64-unknown-linux-gnu)
     echo $download_urls
 else
     echo "Error: File not found."
