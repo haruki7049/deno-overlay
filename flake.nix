@@ -1,26 +1,29 @@
 {
-  description = "An overlay for Godot";
+  description = "An overlay for Deno javascript runtime";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/23.11";
     treefmt-nix.url = "github:numtide/treefmt-nix";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, systems, nixpkgs, treefmt-nix }:
+  outputs = { self, nixpkgs, treefmt-nix, flake-utils }:
+  flake-utils.lib.eachDefaultSystem (system:
     let
-      eachSystem = f:
-        nixpkgs.lib.genAttrs (import systems)
-        (system: f nixpkgs.legacyPackages.${system});
-      treefmtEval =
-        eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
-    in {
-      # Use `nix fmt`
-      formatter =
-        eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
+      pkgs = import nixpkgs {
+        inherit system;
+      };
+      treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
+    in{
+      formatter = treefmtEval.config.build.wrapper;
+      checks = {
+        formatting = treefmtEval.config.build.check self;
+      };
 
-      # Use `nix flake check`
-      checks = eachSystem (pkgs: {
-        formatting = treefmtEval.${pkgs.system}.config.build.check self;
-      });
-    };
+      devShells.default = pkgs.mkShell {
+        packages = with pkgs; [
+          nixd
+        ];
+      };
+    });
 }
