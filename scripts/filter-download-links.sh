@@ -1,11 +1,11 @@
 #! /usr/bin/env nix-shell
-#! nix-shell -i bash -p bash gnugrep gawk
+#! nix-shell -i bash -p bash jq
 
 if [ -p /dev/stdin ]; then
-    download_urls=$(cat /dev/stdin | grep browser_download_url | gawk '{gsub(/ /, "\n"); print}' | uniq | grep https://)
+    download_urls=$(cat /dev/stdin | jq '.[].tag_name' | tr -d '"')
     echo $download_urls
 elif [[ -f $1 ]]; then
-    download_urls=$(cat $1 | grep browser_download_url | gawk '{gsub(/ /, "\n"); print}' | uniq | grep https://)
+    download_urls=$(cat $1 | jq '.[].tag_name' | tr -d '"')
     echo $download_urls
 else
     echo "Error: File not found."
