@@ -1,7 +1,8 @@
 # Usage
 
 ```bash
-./fetch-releases.sh sources.json
+./fetch-releases.sh > sources.json
+# Fetch all releases using shell's redirect
 ```
 ```bash
 ./fetch-releases.sh | ./filter-download-links.sh
