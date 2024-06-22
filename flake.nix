@@ -1,5 +1,5 @@
 {
-  description = "An overlay for Godot";
+  description = "An overlay for Deno javascript runtime";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/23.11";
