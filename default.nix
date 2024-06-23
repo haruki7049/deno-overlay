@@ -3,9 +3,11 @@ self: super: {
     pname = "deno";
     inherit (super.stdenv.hostPlatform) system;
 
-    releases = builtins.fromJSON (builtins.readFile ./sources.json);
-    assets = builtins.concatMap (release: release.assets) releases;
-    downloadURLs = builtins.map (asset: asset.browser_download_url) assets;
+    pkgs = import <nixpkgs> {};
+    lib = pkgs.lib;
+
+    versions = builtins.map (v: lib.strings.removeSuffix "\n" v) (lib.splitString " " (builtins.readFile ./versions.txt));
+    downloadURLs = builtins.map (v: lib.strings.removeSuffix "\n" v) (lib.splitString " " (builtins.readFile ./download-links.txt));
 
     x86_64-linuxURLs =
       builtins.filter (link: super.lib.strings.hasInfix "deno-x86_64-unknown-linux-gnu" link)
