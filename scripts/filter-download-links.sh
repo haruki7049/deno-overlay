@@ -2,26 +2,10 @@
 #! nix-shell -i bash -p bash jq
 
 if [ -p /dev/stdin ]; then
-    download_urls=$(cat /dev/stdin \
-        | jq '.[].assets' \
-        | grep browser_download_url \
-        | tr ' ' '\n' \
-        | grep -v browser_download_url \
-        | grep -v deno_src \
-        | grep -v denort \
-        | tr -d '"' \
-        | sort)
+    download_urls=$(cat /dev/stdin | jq -r '.[].assets[].browser_download_url')
     echo $download_urls
 elif [[ -f $1 ]]; then
-    download_urls=$(cat $1 \
-        | jq '.[].assets' \
-        | grep browser_download_url \
-        | tr ' ' '\n' \
-        | grep -v browser_download_url \
-        | grep -v deno_src \
-        | grep -v denort \
-        | tr -d '"' \
-        | sort)
+    download_urls=$(cat $1 | jq -r '.[].assets[].browser_download_url')
     echo $download_urls
 else
     echo "Error: File not found."
