@@ -1,7 +1,5 @@
 self: super: {
   deno = let
-    inherit (super.stdenv.hostPlatform) system;
-
     pkgs = import <nixpkgs> { };
     fetchurl = pkgs.fetchurl;
 
