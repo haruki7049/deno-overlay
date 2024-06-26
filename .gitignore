@@ -1,2 +1,5 @@
 # Nix's result
 result
+
+# Direnv
+.direnv/
