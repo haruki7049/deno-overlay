@@ -12,10 +12,19 @@
       let
         pkgs = import nixpkgs { inherit system; };
         treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
-        callPackage = pkgs.callPackage;
+        fetch-json = pkgs.rustPlatform.buildRustPackage {
+          name = "fetch-json";
+          src = ./scripts/fetch-json;
+
+          cargoHash = "sha256-gbw4ZIb9kbculTGISIlq6az3Eq0M4S+0kGDcq7gmvbk=";
+        };
       in {
         formatter = treefmtEval.config.build.wrapper;
         checks = { formatting = treefmtEval.config.build.check self; };
+
+        packages = {
+          inherit fetch-json;
+        };
 
         devShells.default = pkgs.mkShell { packages = with pkgs; [ nixd ]; };
       });
