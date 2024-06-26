@@ -16,7 +16,7 @@
           name = "build-json";
           src = ./scripts/build-json;
 
-          cargoHash = "sha256-gbw4ZIb9kbculTGISIlq6az3Eq0M4S+0kGDcq7gmvbk=";
+          cargoHash = "sha256-6SFGhHHym4nDjFuG+8uU+fmmVyyX13hNz6E0JGtoORw=";
         };
       in {
         formatter = treefmtEval.config.build.wrapper;
