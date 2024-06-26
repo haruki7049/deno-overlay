@@ -12,9 +12,9 @@
       let
         pkgs = import nixpkgs { inherit system; };
         treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
-        fetch-json = pkgs.rustPlatform.buildRustPackage {
-          name = "fetch-json";
-          src = ./scripts/fetch-json;
+        build-json = pkgs.rustPlatform.buildRustPackage {
+          name = "build-json";
+          src = ./scripts/build-json;
 
           cargoHash = "sha256-gbw4ZIb9kbculTGISIlq6az3Eq0M4S+0kGDcq7gmvbk=";
         };
@@ -22,7 +22,7 @@
         formatter = treefmtEval.config.build.wrapper;
         checks = { formatting = treefmtEval.config.build.check self; };
 
-        packages = { inherit fetch-json; };
+        packages = { inherit build-json; };
 
         devShells.default =
           pkgs.mkShell { packages = with pkgs; [ nixd rustc cargo clang ]; };
