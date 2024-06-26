@@ -22,10 +22,9 @@
         formatter = treefmtEval.config.build.wrapper;
         checks = { formatting = treefmtEval.config.build.check self; };
 
-        packages = {
-          inherit fetch-json;
-        };
+        packages = { inherit fetch-json; };
 
-        devShells.default = pkgs.mkShell { packages = with pkgs; [ nixd ]; };
+        devShells.default =
+          pkgs.mkShell { packages = with pkgs; [ nixd rustc cargo clang ]; };
       });
 }
