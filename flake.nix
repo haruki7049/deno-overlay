@@ -5,16 +5,18 @@
     nixpkgs.url = "github:nixos/nixpkgs/24.05";
     treefmt-nix.url = "github:numtide/treefmt-nix";
     flake-utils.url = "github:numtide/flake-utils";
+    rust-overlay.url = "github:oxalica/rust-overlay";
     crane.url = "github:ipetkov/crane";
   };
 
-  outputs = { self, nixpkgs, treefmt-nix, flake-utils, crane }:
+  outputs = { self, nixpkgs, treefmt-nix, flake-utils, crane, rust-overlay }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs { inherit system; overlays = [ (import rust-overlay) ]; };
         treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
+        rust = pkgs.rust-bin.fromRustupToolchainFile ./scripts/build-json/rust-toolchain.toml;
         lib = pkgs.lib;
-        craneLib = crane.mkLib pkgs;
+        craneLib = (crane.mkLib pkgs).overrideToolchain rust;
 
         commonArgs = rec {
           src = craneLib.cleanCargoSource ./scripts/build-json;
@@ -41,6 +43,12 @@
         packages = { inherit build-json; };
 
         devShells.default =
-          pkgs.mkShell { packages = with pkgs; [ nixd rustc cargo clang ]; };
+          pkgs.mkShell {
+            packages = [ pkgs.nixd rust ];
+          };
+
+          shellHook = ''
+            export PS1="\n[nix-shell:\w]$ "
+          '';
       });
 }
