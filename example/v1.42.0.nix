@@ -2,7 +2,7 @@
     inherit overlays;
   }
 , overlays ? [
-    (import ./default.nix)
+    (import ../default.nix)
   ]
 , mkShell ? pkgs.mkShell
 }:
