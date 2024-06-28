@@ -1,7 +1,8 @@
 #! /usr/bin/env nix-shell
-#! nix-shell -i python3.11 -p python311 python311Packages.requests
+#! nix-shell -i python3.11 -p python311 python311Packages.requests nix
 
 import requests
+import subprocess
 import json
 
 
@@ -25,16 +26,23 @@ def get_all_releases(owner, repo):
     return releases
 
 
-def save_to_json(releases, filename):
+def save_to_json(json, filename):
     with open(filename, "w") as file:
-        json.dump(releases, file, indent=2)
+        json.dump(json, file, indent=2)
 
 
-if __name__ == "__main__":
-    owner = "denoland"  # リポジトリの所有者のユーザー名または組織名
-    repo = "deno"  # リポジトリ名
+def gen_json(sources_json: str):
+    pass
 
-    releases = get_all_releases(owner, repo)
-    if releases:
-        save_to_json(releases, "sources.json")
-        print(f"Releases of {repo} saved to sources.json!!")
+
+#if __name__ == "__main__":
+#    owner = "denoland"  # リポジトリの所有者のユーザー名または組織名
+#    repo = "deno"  # リポジトリ名
+#
+#    releases = get_all_releases(owner, repo)
+#    if releases:
+#        save_to_json(releases, "sources.json")
+#        print(f"Releases of {repo} saved to sources.json!!")
+#
+#result = subprocess.run(["nix-prefetch-url", "https://github.com/denoland/deno/releases/download/v1.42.0/deno-x86_64-unknown-linux-gnu.zip"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+#print(result.stdout)
