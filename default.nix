@@ -53,5 +53,10 @@ self: super: {
         url = "https://github.com/denoland/deno/releases/download/v1.42.0/deno-x86_64-unknown-linux-gnu.zip";
         sha256 = "sha256-3jbacxIAeBW/V2T7eN0S94OMtdiXow55FUt0idI2Oy8=";
       };
+      "1.44.4" = mkBinaryInstall {
+        version = "1.44.4";
+        url = "https://github.com/denoland/deno/releases/download/v1.44.4/deno-x86_64-unknown-linux-gnu.zip";
+        sha256 = "";
+      };
     };
 }
