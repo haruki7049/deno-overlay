@@ -1,5 +1,5 @@
 {
   projectRootFile = "treefmt.nix";
-  programs.nixfmt.enable = true;
+  programs.nixpkgs-fmt.enable = true;
   programs.ruff.enable = true;
 }
