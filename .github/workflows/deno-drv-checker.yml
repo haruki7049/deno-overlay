@@ -3,7 +3,7 @@ on:
   push:
 permissions: {}
 jobs:
-  check-v1.42.0:
+  check-v1-42-0:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
