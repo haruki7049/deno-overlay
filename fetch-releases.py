@@ -6,7 +6,7 @@ import subprocess
 import json
 
 
-def get_all_releases(owner, repo):
+def get_all_releases(owner: str, repo: str) -> list:
     """
     Get all releases of a repository
 
@@ -41,7 +41,7 @@ def get_all_releases(owner, repo):
     return releases
 
 
-def save_to_json(json, filename):
+def save_to_json(json: dict, filename: str):
     """
     Save json to a file
 
@@ -69,6 +69,9 @@ def gen_nix_hash(url: str) -> str:
     -------
     hash : str
         Nix hash of the file
+
+    >>> gen_nix_hash("https://github.com/denoland/deno/releases/download/v1.42.0/deno-x86_64-unknown-linux-gnu.zip")
+    0brv6v98jx2b2mwhx8wpv2sqr0zp2bfpiyv4ayziay0029rxldny
     """
     result = subprocess.run(["nix-prefetch-url", url], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     return result.stdout
