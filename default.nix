@@ -2,8 +2,10 @@ self: super: {
   deno =
     let
       pkgs = import <nixpkgs> { };
+      lib = pkgs.lib;
       fetchurl = pkgs.fetchurl;
       stdenv = pkgs.stdenv;
+      sources = lib.importJSON ./sources.json;
 
       mkBinaryInstall = { pname ? "deno", version, url, sha256 }:
         stdenv.mkDerivation rec {
