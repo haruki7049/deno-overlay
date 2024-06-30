@@ -21,49 +21,49 @@
         treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
         fetchurl = pkgs.fetchurl;
         stdenv = pkgs.stdenv;
+        mkBinaryInstall = { pname ? "deno", version, url, sha256 }:
+          stdenv.mkDerivation rec {
+            inherit pname version;
+
+            src = fetchurl { inherit url sha256; };
+            sourceRoot = ".";
+
+            nativeBuildInputs = with pkgs;
+              [ autoPatchelfHook makeWrapper unzip libgcc ];
+
+            buildInputs = lib.optionals stdenv.isDarwin
+              ([ pkgs.libiconv pkgs.darwin.libobjc ]
+                ++ (with pkgs.darwin.apple_sdk_11_0.frameworks; [
+                Security
+                CoreServices
+                Metals
+                MetalPerformanceShaders
+                Foundation
+                QuartzCore
+              ]));
+
+            libraries = lib.makeLibraryPath buildInputs;
+
+            installPhase = ''
+              mkdir -p $out/bin
+              install -m 0755 deno $out/bin/deno
+            '';
+
+            postFixup = ''
+              wrapProgram $out/bin/deno \
+                --set LD_LIBRARY_PATH ${libraries}
+            '';
+
+            meta = with lib; {
+              description = "A secure runtime for JavaScript and TypeScript";
+              homepage = "https://deno.land/";
+              mainProgram = "deno";
+              platforms = [ "x86_64-linux" ];
+              license = licenses.mit;
+            };
+          };
         deno =
           let
-            mkBinaryInstall = { pname ? "deno", version, url, sha256 }:
-              stdenv.mkDerivation rec {
-                inherit pname version;
-
-                src = fetchurl { inherit url sha256; };
-                sourceRoot = ".";
-
-                nativeBuildInputs = with pkgs;
-                  [ autoPatchelfHook makeWrapper unzip libgcc ];
-
-                buildInputs = lib.optionals stdenv.isDarwin
-                  ([ pkgs.libiconv pkgs.darwin.libobjc ]
-                    ++ (with pkgs.darwin.apple_sdk_11_0.frameworks; [
-                    Security
-                    CoreServices
-                    Metals
-                    MetalPerformanceShaders
-                    Foundation
-                    QuartzCore
-                  ]));
-
-                libraries = lib.makeLibraryPath buildInputs;
-
-                installPhase = ''
-                  mkdir -p $out/bin
-                  install -m 0755 deno $out/bin/deno
-                '';
-
-                postFixup = ''
-                  wrapProgram $out/bin/deno \
-                    --set LD_LIBRARY_PATH ${libraries}
-                '';
-
-                meta = with lib; {
-                  description = "A secure runtime for JavaScript and TypeScript";
-                  homepage = "https://deno.land/";
-                  mainProgram = "deno";
-                  platforms = [ "x86_64-linux" ];
-                  license = licenses.mit;
-                };
-              };
           in
           {
             "1.42.0" = mkBinaryInstall {
