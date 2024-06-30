@@ -5,9 +5,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/23.11";
     treefmt-nix.url = "github:numtide/treefmt-nix";
     flake-utils.url = "github:numtide/flake-utils";
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, treefmt-nix, flake-utils }:
+  outputs = { self, nixpkgs, treefmt-nix, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
