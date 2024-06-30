@@ -64,7 +64,8 @@
                   license = licenses.mit;
                 };
               };
-          in {
+          in
+          {
             "1.42.0" = mkBinaryInstall {
               version = "1.42.0";
               url = "https://github.com/denoland/deno/releases/download/v1.42.0/deno-x86_64-unknown-linux-gnu.zip";
