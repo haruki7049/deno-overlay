@@ -21,3 +21,4 @@ pkgs.mkShell {
 
 ## A list of versions this overlay can support
 - 1.42.0
+- 1.44.4
