@@ -41,13 +41,13 @@ def get_all_releases(owner: str, repo: str) -> list:
     return releases
 
 
-def save_to_json(sources: dict, filename: str):
+def save_to_json(sources: list, filename: str):
     """
     Save json to a file
 
     Parameters
     ----------
-    json : dict
+    json : list
         JSON data which will be saved to a file
     filename : str
         File name to save the JSON data
@@ -80,7 +80,7 @@ def gen_nix_hash(url: str) -> str:
 def gen_list_of_download_link(sources: dict) -> list:
     result: list = []
 
-    for version in sources["deno"]:
+    for version in sources:
         for assets in version["assets"]:
             result.append(assets["browser_download_url"])
 
@@ -97,6 +97,16 @@ def filter_x86_64_linux_link(urls: list) -> list:
     return result
 
 
+def filter_aarch64_linux_link(urls: list) -> list:
+    result: list = []
+
+    for url in urls:
+        if "aarch64-unknown-linux-gnu" in url:
+            result.append(url)
+
+    return result
+
+
 def gen_list_of_versions(sources: list) -> list:
     result: list = []
 
@@ -106,21 +116,39 @@ def gen_list_of_versions(sources: list) -> list:
     return result
 
 
-def gen_releases_list(versions: list, urls: list) -> list:
+def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_urls: list) -> list:
     result: list = []
 
     for version in versions:
-        for url in urls:
+        for url in x86_64_linux_urls:
+            #sha256 = gen_nix_hash(url)
+            sha256 = "hoge"
+
             if version in url:
-                result.append({"version": version, "url": url})
+                result.append({"version": version, "url": url, "arch": "x86_64-linux", "sha256": sha256})
+
+        for url in aarch64_linux_urls:
+            #sha256 = gen_nix_hash(url)
+            sha256 = "hoge"
+
+            if version in url:
+                result.append({"version": version, "url": url, "arch": "aarch64-linux", "sha256": sha256})
 
     return result
 
 
-#if __name__ == "__main__":
-#    with open("releases.json", "r") as f:
-#        json_data = f.read()
-#
-#    deno_info: list = json.loads(json_data)
-#
-#    print(gen_list_of_versions(deno_info))
+if __name__ == "__main__":
+    destination = "sources.json"
+
+    with open("releases.json", "r") as f:
+        json_string = f.read()
+
+    deno_info: list = json.loads(json_string)
+    versions: list = gen_list_of_versions(deno_info)
+    urls: list = gen_list_of_download_link(deno_info)
+    x86_64_linux_urls: list = filter_x86_64_linux_link(urls)
+    aarch64_linux_urls: list = filter_aarch64_linux_link(urls)
+    releases_list: list = [{ "deno": gen_releases_list(versions, x86_64_linux_urls, aarch64_linux_urls)}]
+
+    save_to_json(releases_list, destination)
+    print("Done!")
