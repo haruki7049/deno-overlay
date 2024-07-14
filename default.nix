@@ -49,5 +49,5 @@ self: super: {
           };
         };
     in
-    builtins.listToAttrs (map (v: {name = v.version; value = mkBinaryInstall { version = v.version; url = v.url; sha256 = v.sha256; };}) sources.deno);
+    builtins.listToAttrs (map (v: { name = v.version; value = mkBinaryInstall { version = v.version; url = v.url; sha256 = v.sha256; }; }) sources.deno);
 }
