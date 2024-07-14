@@ -121,12 +121,14 @@ def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_url
 
     for version in versions:
         for url in x86_64_linux_urls:
+            print("Generating nix hash for", url)
             sha256 = gen_nix_hash(url)
 
             if version in url:
                 result.append({"version": version, "url": url, "arch": "x86_64-linux", "sha256": sha256})
 
         for url in aarch64_linux_urls:
+            print("Generating nix hash for", url)
             sha256 = gen_nix_hash(url)
 
             if version in url:
