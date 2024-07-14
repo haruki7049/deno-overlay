@@ -5,1747 +5,1459 @@
         "version": "v1.45.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.45.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.45.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.45.1/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1g7f6h33xvcvgkic7akyl1z2389frqm6p5p258rnh4xb9w596y2p\n"
       },
       {
         "version": "v1.45.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.45.1/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.45.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.45.1/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1lp3vln09bapwp2vy8xzxrmj4bafi7dv056bbmjmcgang78w51wv\n"
       },
       {
         "version": "v1.45.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.45.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.45.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.45.0/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "07cxagdij38sz1sf13i8ziv1fcfgr2lzf97gmihz0cyzs3s209mm\n"
       },
       {
         "version": "v1.45.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.45.0/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.45.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.45.0/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "14rj0bwz0044f6vqymm07dlhkwahckskcjxsl4gfaqjkwgb7q0gn\n"
       },
       {
         "version": "v1.44.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.4",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.4/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0mgfx70crrahpg9rj6q319k8bf3d7122zjik3ygwxl1jm89nv3y4\n"
       },
       {
         "version": "v1.44.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.4/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.4",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.4/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "01hgbsj5ccl92r8z0rm66fk0lqqyb4s31669pv2wn7j7zqi9fbf8\n"
       },
       {
         "version": "v1.44.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.3",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.3/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0k31b8m2r19d2l12yv8rrqyxpvybrixjysad1n43lx8gq07001yi\n"
       },
       {
         "version": "v1.44.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.3/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.3",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.3/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "005z2bqkwsl0j6pyimvxprzbswnnsnvqxg9w2xyv96d3g0wfx135\n"
       },
       {
         "version": "v1.44.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.2",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.2/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1rz4ik6jfm3xvgr02vhdashih26106pmfxs3ajpr64ly270sh449\n"
       },
       {
         "version": "v1.44.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.2/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.2",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.2/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1s5ic1fa7qfgwj0wjv1n11kkypzz4q7if72hzq3l1hr8k2ghykrb\n"
       },
       {
         "version": "v1.44.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.1/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1yzckf5ny22lx81yfavxjklp66pph3shg7pksld7bmrdy686rvdr\n"
       },
       {
         "version": "v1.44.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.1/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.1/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1c54fibyj795rfa6yi9ky8vnf8h3f6p07c3wwhl5i92wlmny34i1\n"
       },
       {
         "version": "v1.44.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.0/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "03rlacrli19qbqy4fbkqmc8ajg4rbn39zjclj34dwiifkkwf53xv\n"
       },
       {
         "version": "v1.44.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.44.0/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.44.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.44.0/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1rsh4sdj6mwb2pln15kyph7clcahpyasywn1zc5nzmmynslnmacl\n"
       },
       {
         "version": "v1.43.6",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.6/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.6",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.6/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1vbxrw8dci22lkf73arpxg5905x3iv9zlyzpvv5qcgv7m5d8w4y2\n"
       },
       {
         "version": "v1.43.6",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.6/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.6",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.6/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1nrsiw1vc8qixqk0iyx65ajq96i4k2xznhh2jwqvbh4j9s425gsf\n"
       },
       {
         "version": "v1.43.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.5/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.5",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.5/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0pbpd5c0iz1m9nhqxamw2jz5qpg6j0yazyjsp2ni2picjccghsr4\n"
       },
       {
         "version": "v1.43.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.5/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.5",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.5/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1ddggnm7ynp5h1hbmnd5mx8s2727sd64hygw8idglyn1lc8csd9k\n"
       },
       {
         "version": "v1.43.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.4",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.4/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "06i9ygcmkzw42p7c6198nqb4qfbzdl6mz36dlahaycczxxb3jkal\n"
       },
       {
         "version": "v1.43.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.4/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.4",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.4/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "169h3wi7qfivya6hfbc800qx2j0p4i9056fy39vm2nbc1r67343b\n"
       },
       {
         "version": "v1.43.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.3",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.3/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1zhpcj97fpm16licxfsbidfr5br4cc61aga523d2052lnn1flxh4\n"
       },
       {
         "version": "v1.43.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.3/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.3",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.3/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1il473fr8822i917y3pw2hk1ap099k5bi6zyjlqjzcsqmaqb0k4g\n"
       },
       {
         "version": "v1.43.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.2",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.2/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0238zaifdr79yqn2g7rj8cild4p3xn91m6vlcx19cyll23dy6yr2\n"
       },
       {
         "version": "v1.43.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.2/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.2",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.2/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "05zr73s09s3qy6584kvgyjz10c61mccr7l9gpnbsxcq92aqq98ph\n"
       },
       {
         "version": "v1.43.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.1/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "04d51wilxzssix5cyg5c8kfvscwp1hfk22yhx6h6jv43d36w55x7\n"
       },
       {
         "version": "v1.43.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.1/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.1/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1ad0rqiv332ll4sxrvv2fg5diqdjiw13r17ci88pv4spzrfwlxry\n"
       },
       {
         "version": "v1.43.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.0/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "04d51wilxzssix5cyg5c8kfvscwp1hfk22yhx6h6jv43d36w55x7\n"
       },
       {
         "version": "v1.43.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.43.0/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.43.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.43.0/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1ad0rqiv332ll4sxrvv2fg5diqdjiw13r17ci88pv4spzrfwlxry\n"
       },
       {
         "version": "v1.42.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.4",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.4/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1fdxccn5b2rmsy2p7r5l5ha9v777fj8kiihhhkp12if4bvnrsxlg\n"
       },
       {
         "version": "v1.42.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.4/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.4",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.4/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1sx7bmmdv37inxz0y4zs3h9b44d1qcx4vyc3vi019vj943d4axf8\n"
       },
       {
         "version": "v1.42.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.3",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.3/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1b4d7jkw9hb1p61zag00x5n2p5i6cgskx4x14ix00hrfwdmwj43w\n"
       },
       {
         "version": "v1.42.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.3/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.3",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.3/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1jbaqdnv9j0c9ybfsqf37gwrzami7k9zxdljkpy9y8z0m48axbvi\n"
       },
       {
         "version": "v1.42.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.2",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.2/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1msg9kw0613r8sy3gaf77mlml8jfhrqdw2gvnv1xssfl679l4qvm\n"
       },
       {
         "version": "v1.42.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.2/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.2",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.2/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "0hii1b5c2lhvjip9lvgfy84937ijvw0ds8yky1vhf2x13gjyxzr1\n"
       },
       {
         "version": "v1.42.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.1/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0f6dvvnc39qj7j7ldq7x9651909xvb2ajkcws93sc4kx4zdvlf7q\n"
       },
       {
         "version": "v1.42.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.1/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.1/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "0jfk355y8pwyy7xhlnmjv12k4a07z4plzd9lp94kzy3q5mbqzh3r\n"
       },
       {
         "version": "v1.42.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.0/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0brv6v98jx2b2mwhx8wpv2sqr0zp2bfpiyv4ayziay0029rxldny\n"
       },
       {
         "version": "v1.42.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.42.0/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.42.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.42.0/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "0kk35z2ffizaspv9qyz334kn03nxgkms0mqzx639jg1vr1k4rxim\n"
       },
       {
         "version": "v1.41.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.41.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.41.3",
-        "url": "https://github.com/denoland/deno/releases/download/v1.41.3/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0kllv59w09ly21k6b552s1kvyh62lbbaidmn8r25lkdjapsg7pgm\n"
       },
       {
         "version": "v1.41.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.41.3/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.41.3",
-        "url": "https://github.com/denoland/deno/releases/download/v1.41.3/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "0qbf4vdg65qcc9h949mmkrlnpls7sc85464nn8pb0m98xvavm64r\n"
       },
       {
         "version": "v1.41.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.41.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.41.2",
-        "url": "https://github.com/denoland/deno/releases/download/v1.41.2/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1p98my1sqh6gnprwyahpja3x31x4c5zlh8wd1011zmjar9sw13ry\n"
       },
       {
         "version": "v1.41.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.41.2/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.41.2",
-        "url": "https://github.com/denoland/deno/releases/download/v1.41.2/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1kgyx40h6l2pjy02yj0yd66365bqh0mxdw2rbi62r3qqmvdzp4kh\n"
       },
       {
         "version": "v1.41.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.41.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.41.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.41.1/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0yqbhdz50kxa2lg2nlghkcvik0ps3lqd1q2k17lxh7fj5a17fcr3\n"
       },
       {
         "version": "v1.41.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.41.1/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.41.1",
-        "url": "https://github.com/denoland/deno/releases/download/v1.41.1/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "12jwdyqzmcy283fc3bkfwadkh4bgvvvvhjx937x0rzrmsr6mkzxl\n"
       },
       {
         "version": "v1.41.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.41.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.41.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.41.0/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1wx2xiby3szc61r3ki04afdimd83dlwyaljf21qzgd6l0h3n5cn9\n"
       },
       {
         "version": "v1.41.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.41.0/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.41.0",
-        "url": "https://github.com/denoland/deno/releases/download/v1.41.0/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "0dbrpf0l6fn94hbixlmf9rqngi5pzwa4md4xs0z384nz2j49f10y\n"
       },
       {
         "version": "v1.40.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.40.5/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.40.5",
-        "url": "https://github.com/denoland/deno/releases/download/v1.40.5/denort-x86_64-unknown-linux-gnu.zip",
-        "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "16f8vjjnmpvzqj102z28nzfisj8zkyvf1nf2qvkq482zbsxh5fyg\n"
       },
       {
         "version": "v1.40.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.40.5/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
-      },
-      {
-        "version": "v1.40.5",
-        "url": "https://github.com/denoland/deno/releases/download/v1.40.5/denort-aarch64-unknown-linux-gnu.zip",
-        "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "14k6hb0rcdgvndfgidd18cpypb0vrn4cqlgvm2fsyb80qml7hlzr\n"
       },
       {
         "version": "v1.40.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.40.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0d9j49srcbr5clgmyq7k5gfd89fnhfm5p3ggx0kfxgvxhwanc865\n"
       },
       {
         "version": "v1.40.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.40.4/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "0pnrvg4gadf5kn9nwfq6wqsp9dx2qqsvirr1w6hpxf1hyawg47i5\n"
       },
       {
         "version": "v1.40.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.40.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0azcn91l8h2ibki9l9afdbvcsdpsh8gy6gl2kj4ca5y8ckgh4add\n"
       },
       {
         "version": "v1.40.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.40.3/deno-aarch64-unknown-linux-gnu.zip",
         "arch": "aarch64-linux",
-        "sha256": "hoge"
+        "sha256": "1m98vr0ikd3vaxg4mj1846x4cwkfhfz9fz0zq52acffw6w93lb5w\n"
       },
       {
         "version": "v1.40.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.40.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1hvyab0l09zb3inncw75fzkl963xrlc94sczynvd36waavalxbxc\n"
       },
       {
         "version": "v1.40.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.40.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "14gimgj34b82qcm4a4qg9lw30jwphmx9nf787p7r48ia23wcnk85\n"
       },
       {
         "version": "v1.40.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.40.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0nhp6fz34di1k3bzz8rm0c3wagid2mhcc7v962xrdpi3gn7v3gnw\n"
       },
       {
         "version": "v1.39.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.39.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1792bzzbi00z0i7fyqrz7qx7ncdvgxb9r5dbfwjbqd145h91dfai\n"
       },
       {
         "version": "v1.39.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.39.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1nk7jd4511dqc9gxq85dlna6a7d7x3fsa2q4143hnj4f7g016hkl\n"
       },
       {
         "version": "v1.39.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.39.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "175922pxkygkxv8in0j37b0r66yfphxvgxfbh60s8km6dnrw3i5z\n"
       },
       {
         "version": "v1.39.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.39.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "10hakq7sc20bv7sfs5xfmvp8m3im4d99dgway4dyqcf91sjq7mdx\n"
       },
       {
         "version": "v1.39.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.39.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0j2fa4jab8q99l004yk4yh5rrnyiy4vzbvl5znsh3bkbswpsk2sh\n"
       },
       {
         "version": "v1.38.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.38.5/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "03ra284p68hc01c40rb2ribm1rqhd1pwr85i98g04h9j43p7cg84\n"
       },
       {
         "version": "v1.38.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.38.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1f7811jf07bh1zrhs9lzrv2fr5dvr1wiy8367mlwc3lk3jphxgfk\n"
       },
       {
         "version": "v1.38.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.38.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "18z0qjiwhk3vdjl9v3jnkd4fnzs55fg9zq9cxg6j88wjg87fzsh1\n"
       },
       {
         "version": "v1.38.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.38.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1rigm661kwz74rq2iar77kfzhwdi06gjkn7q0kbzadylmldwhfc7\n"
       },
       {
         "version": "v1.38.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.38.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "10kydzfs043cargmr4s7nw18l6x0m8v9a86z385h7059hcpa0ppy\n"
       },
       {
         "version": "v1.38.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.38.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0s7zwii4kp051cmmd0p3lspn72rkh8ddp3d8y1kbkpqsrpdnw268\n"
       },
       {
         "version": "v1.37.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.37.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "08m8i0a0h7xcd4jr3x0wc15p482264b1k57p451fvk7dr3s5vxhb\n"
       },
       {
         "version": "v1.37.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.37.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "005a1xv555w6ig2w53najmz7iq4aw10g6jirxcadk9af9hikrfry\n"
       },
       {
         "version": "v1.37.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.37.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1g38m5278dhpjz0mvzd135kqhw4lfqpzv49wy0w3vb6nczxqd6mq\n"
       },
       {
         "version": "v1.36.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.36.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0p8g09k0ggba7hzzv2qris8k9hsjixl4k0c0yb6ypr88jhjjyj5d\n"
       },
       {
         "version": "v1.36.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.36.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0zps69cy3m3fwj6b4mlz5v7ip45pn85a5iwh76ac0sqlw4a7mw8j\n"
       },
       {
         "version": "v1.36.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.36.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1l50v33qdkcf3z0gn4hajfad5hg25inmynv63680zm9wnrl9cxzl\n"
       },
       {
         "version": "v1.36.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.36.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1k27svxxil2qy2164q79ipw1ff45r48lb7b4haf9n3b18fv4wvv3\n"
       },
       {
         "version": "v1.36.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.36.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1zr7y9qawjzkd6p29d9i5ygzy68qpglj9n3yd6yrgf4h1wwv09wz\n"
       },
       {
         "version": "v1.35.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.35.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0xf32iw79kb22cmj8jgfljba7g8v5wqmh1987n45fz43i22m806l\n"
       },
       {
         "version": "v1.35.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.35.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0jxaqj0ypkw21z6ydpgzf2blx3i0lf90sig8hi2y7rv1qia1sq23\n"
       },
       {
         "version": "v1.35.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.35.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0s947hbykc4jsfvp3vvcppg56mj8bj5c01nv118hqps1j4bnavdj\n"
       },
       {
         "version": "v1.35.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.35.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0jhpnp6rdd346c2vvp7crslnmw1cby6s3ljjiq7gmh9qnilppg96\n"
       },
       {
         "version": "v1.34.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.34.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0fawci19xq0rg4lwzhj2c37yzx1gbwsid4qc9rz7p4q96nl9dm7j\n"
       },
       {
         "version": "v1.34.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.34.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1vi7hfsw37lqmv1hs9ssqglqwmdm72s906309si5dsf554fwjm41\n"
       },
       {
         "version": "v1.34.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.34.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "18g75i8b5vwcjxz8dzg4yn2558rmf7jp48vdv0pjv4pkn916kq11\n"
       },
       {
         "version": "v1.34.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.34.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1nr6yy2c0srcaq7515si9vxrz2vp5lwl23dnm26xsh12vd7mxqqj\n"
       },
       {
         "version": "v1.33.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.33.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0mwjhs8mkqlph4pqxk92dym5p7i86zfpsqzngap1qj586a3l8qif\n"
       },
       {
         "version": "v1.33.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.33.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "07jk7cjgrjxinxlqwv8vk9hddmvnfdkkfczsbj1lmq4lj8dclpk6\n"
       },
       {
         "version": "v1.33.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.33.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1xmrz62j5vd97jbg0zh56j846d4kp6xlayy69rxrlhpzhkf8b5vq\n"
       },
       {
         "version": "v1.33.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.33.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0gpng3mllhkywsmwk2xy4wb9rbca1ksj6xkd37b5v22czydg5r6z\n"
       },
       {
         "version": "v1.33.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.33.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "18jwwv0jn4y5k1cv7qsyjkx4n7hplj68211nh4ipya0k8zq0bqin\n"
       },
       {
         "version": "v1.32.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.32.5/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1sw2nhgm96jmwrjd00dzjvr52zshin3ykya9rsysyvqxn3pqm763\n"
       },
       {
         "version": "v1.32.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.32.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0jka0qc9imnfp1sdwyx1d2i1vc4bw8jp33a4dl1v4aq6i4jpn920\n"
       },
       {
         "version": "v1.32.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.32.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1szpj9msrzwsadmd12ydn89nqrvbabw2p39w6a6m79qan17dvmwj\n"
       },
       {
         "version": "v1.32.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.32.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0hvps435aam52ln297xm6aad5yiy3k0l3d5ll7f36v0vgrpqwhv1\n"
       },
       {
         "version": "v1.32.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.32.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "08avkdz6ms90rwpvy3gf2lw47qg7sx3wh97im0cgpvpqz10z3h8q\n"
       },
       {
         "version": "v1.32.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.32.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1kyps5dnn2g9vq36aafm98ydwbgdc01hhdb4fz8a92hxj5zrrvwf\n"
       },
       {
         "version": "v1.31.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.31.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0gz2bnwzlckdsckx9sd6v1m5ladyqfsyglj2s3mlqg2b79j2ij9a\n"
       },
       {
         "version": "v1.31.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.31.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "147vvg2my1hfyhsf74ry0nf12dzx5j7n10c824pyc1wyc7360ncv\n"
       },
       {
         "version": "v1.31.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.31.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "03xwfdiaphhsciaragn1jj8nbk132yv6h7fhf9x8lrpr603dbfa0\n"
       },
       {
         "version": "v1.31.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.31.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1mix0r1akik5gy6n2i844y93pfzzc5rgxbaa0ig420gan3bri5ph\n"
       },
       {
         "version": "v1.30.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.30.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0i6kw002di6ilvv4d4mmyn1wr8syhv7c1akgjj6avr84pasjnh6l\n"
       },
       {
         "version": "v1.30.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.30.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "08z91hzbkqi3jzjvi08f8r0zazw95cb70whfdrckj5h5slaiigkh\n"
       },
       {
         "version": "v1.30.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.30.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0xd2q880whhxgp3x7ybwd1mzmryqf1kkwkqjlwqnjaawiw3s40dj\n"
       },
       {
         "version": "v1.30.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.30.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1a1lz191caaj3nywxyqi00yinp2mp3l60jxlcb5ab2xwnd9v5svp\n"
       },
       {
         "version": "v1.29.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.29.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0bm541r3pqqqwclqjbwhn7p853jk190y4s5607d88bjhrnzqn5bz\n"
       },
       {
         "version": "v1.29.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.29.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0bw01j1s2bmqhkmvqb5brla7l2k9bv4j5vq9sis16c3g52la96yi\n"
       },
       {
         "version": "v1.29.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.29.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0wmm6b8vy0l4kp0ip2zcbblk28gdj6a7iwqg2fyj4vqv1qkl8y0l\n"
       },
       {
         "version": "v1.29.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.29.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "17p49w2ryjvjk71i2zmk42a14jhc72vsmysfqv4zi0fl6aqhnbcc\n"
       },
       {
         "version": "v1.29.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.29.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "098ww7cwda33iy0a7xm9x7pp0svs786xkz5zpyvgdvndhzdjwdvq\n"
       },
       {
         "version": "v1.28.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.28.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "189y7gzw87bigmzbliydfx741c7m0z1f0dmkl69pgjpshz76560w\n"
       },
       {
         "version": "v1.28.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.28.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1xdq1rrg53j2xrrh81w5da5yp6rf8vsgxmkcqm3hy7byc4psbsba\n"
       },
       {
         "version": "v1.28.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.28.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1kv8crd5a3kpj7258f5b464cm0z4z3a96fzs23fij9mvv3nx4m6g\n"
       },
       {
         "version": "v1.28.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.28.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1z5y3cvxh7rqp3n1w1jk9rbshkjaxz8i9blln5fdds5bj8m108qz\n"
       },
       {
         "version": "v1.27.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.27.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "10awpwjifwqjhfdzxsmr7gcqn394vv378xamhzwxb23bnk4naxk4\n"
       },
       {
         "version": "v1.27.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.27.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1zwgq27fpviqz42cf9pydccwrf6brkbhm7xwjfjk1m8j6a9sfhly\n"
       },
       {
         "version": "v1.27.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.27.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "190ml7x7ysc1c50nl62zmm3p0chk2b6brwq6imvgzv2f2hjy6mh9\n"
       },
       {
         "version": "v1.26.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.26.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0vj3kwgxi3bdc34rvil0niq0fg24q544fhpvh0rb0crk3914k4ni\n"
       },
       {
         "version": "v1.26.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.26.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1jl8ap31jmrm950f0aiszk6w6q2i42pm4q7s8jvg6i7xcy1647bg\n"
       },
       {
         "version": "v1.26.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.26.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1qcwzw9ifjha4kskvqgkxipiqha2r99zyd2jlppg549zz7xs0kq6\n"
       },
       {
         "version": "v1.25.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.25.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0gb32gm691q534yr6dmkwljy6bb6m5sbnk5vzxbcwhaimfmwwagf\n"
       },
       {
         "version": "v1.25.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.25.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "13xyb1lsbkbg1bscp0l4kpqdmas8pl8296fb74ws9hass34hpma6\n"
       },
       {
         "version": "v1.25.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.25.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1435nggfnqds409w65dps4l75f2kr9f1x0rwds6yhdrca9mx3199\n"
       },
       {
         "version": "v1.25.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.25.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1315s4ibdfp4n646r53rrx5gpcvfs6dryg7fhrjdjsbjq5jqc1ws\n"
       },
       {
         "version": "v1.25.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.25.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0hcj5c6wc6kqdga5im3qfddfq3hdwycfzxm83bbfq3agl5xvjyv1\n"
       },
       {
         "version": "v1.24.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.24.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1rxkhycr4xc0bdbkm8b0k4iwdgw7vmkba4qskp7669wbz14pwh7d\n"
       },
       {
         "version": "v1.24.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.24.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1gr1fsg39hs9s99v62mw1qkkj2ys5x8myazhn4z68b9hynqxrfj5\n"
       },
       {
         "version": "v1.24.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.24.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0mh5f9p6y4mds61h90xciidzhq923bzwz7mdp94l73krrvkfbsqr\n"
       },
       {
         "version": "v1.24.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.24.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1b8009k9h79sa0z979qq3r3x8q0mm7mhx5xlx41qvdf50j75r40k\n"
       },
       {
         "version": "v1.23.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.23.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0wi39kpxhfk8m7fad0c360fzb1c4ggs5i8sn8kx7il7ycpyzcv13\n"
       },
       {
         "version": "v1.23.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.23.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1k25v3ygql3qfmy333g35bgxag54aqy5iggw9agwrm1dfzkycvag\n"
       },
       {
         "version": "v1.23.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.23.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1kr9bdvh5ilbbbcsv52fh4zr7vrwns0qn4m97jrqaw0h9pqrbak0\n"
       },
       {
         "version": "v1.23.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.23.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0kzk3sqpahv72ib9c6srgcy2cd7a7xr0dj1d692nyfj3vn7sms48\n"
       },
       {
         "version": "v1.23.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.23.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1glpgxn4yqp04fnl7h1q38jacmjww43f8xzwyw1cj9a1r495i8fv\n"
       },
       {
         "version": "v1.22.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.22.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1if3fysdq0i25ig0bp28n9489ak8p51wfwjjlav5g3rnsjf547cy\n"
       },
       {
         "version": "v1.22.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.22.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1aj2sn6ns7aiyxr25rq8y1wpfsh5xjsmzhdarhvjlairljwmafb5\n"
       },
       {
         "version": "v1.22.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.22.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1fyy3ygkq15fapw61sqx27fz9nfm31726d2z3vbp8gb7cwnjdb9s\n"
       },
       {
         "version": "v1.22.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.22.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0dymafzs58qn764lqfks8babbqk6d09kn84d7q2aw84f50v79v5w\n"
       },
       {
         "version": "v1.21.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.21.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1mzri42jrcgpprx6lyg9y34ky6cbyd79inccrrmka35chmlwq44l\n"
       },
       {
         "version": "v1.21.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.21.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0iib8j4bc46scy3hl4ngydfda359ylhsb12dpxv5yvz4d0vcy980\n"
       },
       {
         "version": "v1.21.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.21.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "00yaxgz2rrnaajqw94a8f8ibcgwaarv1cfyq7lpdivz1mpf2k218\n"
       },
       {
         "version": "v1.21.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.21.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1yd88ysw2i9s42022k01rmcf3ysk5bg9sk0n8m4l5sqcilmqpz0y\n"
       },
       {
         "version": "v1.20.6",
         "url": "https://github.com/denoland/deno/releases/download/v1.20.6/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0b5nc7ywr3j8j3vgbsvh7jr66wm4fj0hiqf5d74wmrqzldriyhyy\n"
       },
       {
         "version": "v1.20.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.20.5/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1c3g11r1fqnlkdp9hhjjajix2s1c14fi4qd6gjimfj0vd7z7ay7p\n"
       },
       {
         "version": "v1.20.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.20.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "17h793kdqahwv76qmrqjyqlvrpj9416cm2ha63vfl7b155bp6zy7\n"
       },
       {
         "version": "v1.20.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.20.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0vjp3vkfi69rh551h7j5v37qymgf8p7bmgf94fzgawdijfj2mi5g\n"
       },
       {
         "version": "v1.20.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.20.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1d0dz052ivw74j0ll762c2241j7m8lfpvfpd178f90k1zrmc19da\n"
       },
       {
         "version": "v1.20.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.20.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0g29bccdmhx7fdk2pyvrx0maq0zwjcnqpfnq2yhr22anj75kxbxc\n"
       },
       {
         "version": "v1.19.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.19.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "10yq7hwv760g0rgcsy7gwn3sa3gdl4dgw3dbyfnwsgqdfgkyfw7w\n"
       },
       {
         "version": "v1.19.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.19.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0rx8gh4y5kf9dqx3j8s9w713vcakpli31rzx8dw6blffy0cx0r38\n"
       },
       {
         "version": "v1.19.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.19.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "13b1vgh51rr917d5889i3yi90ld6b5l49hdidxypjyykp8hyscsx\n"
       },
       {
         "version": "v1.19.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.19.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1j2vqhgswqqdrs192n8112qcbs423667qf85cdh9bqp5yv6kg7gr\n"
       },
       {
         "version": "v1.18.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.18.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1dwv2dz8w4s3jl1z6zvjw6z7y0r5figm23903hgyxyd9fkq59pgv\n"
       },
       {
         "version": "v1.18.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.18.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1cnwfbsj4qv493x4qjy392zfdjkvf21hw0zabg74dn27pzh2b6q4\n"
       },
       {
         "version": "v1.18.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.18.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0iqm4g5k42l6n75i73hdw6lw259xynzms0f2yzqdqi41n23gjz27\n"
       },
       {
         "version": "v1.17.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.17.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0iiz051wfyg66m8rc97zcsw4fdpiy8cqh47hflcds8cdccy3x23v\n"
       },
       {
         "version": "v1.17.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.17.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1anab2ilsgmf8vbs2n9vxvfyj8yabcn3sjqrmq8n886yazmzvbks\n"
       },
       {
         "version": "v1.17.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.17.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1896dfaz5imkhn4ikqp4mdfqlnkf8101f3pnnpym30x9a3z8nda9\n"
       },
       {
         "version": "v1.17.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.17.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0ry763ywfqvfp8rd54b8gi6hw7qfp6jx595y24wlipb1mj230gg5\n"
       },
       {
         "version": "v1.16.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.16.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0nppnr5d03yr0k8gzk0p4a1s4q1ddbxfr53wsjjz7ig9pwq69lbp\n"
       },
       {
         "version": "v1.16.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.16.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0vf1vgi5pv61m6v8bpm8x4czxji5jfdab689z0rarhmwi58j4dyg\n"
       },
       {
         "version": "v1.16.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.16.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "13lz9lb17kfzzsw16b0f0mf26rspikirnq057vwlyzdlq2p9z60l\n"
       },
       {
         "version": "v1.16.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.16.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "10shz0j5ya8rwxk7qwpdaa3fixzk2xwi4knv78bi09p7vcvcxxd4\n"
       },
       {
         "version": "v1.16.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.16.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0m2cayg0dlabpbfrj2izfinavichwy75dvqnx08bfqggrgzps2nq\n"
       },
       {
         "version": "v1.15.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.15.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1qgz23n424bly5pf8hc2i03z80har4lvcijvmcmf4zwbyfdd4a7p\n"
       },
       {
         "version": "v1.15.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.15.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1zavcga5pkhxfd46xss3gmkard6viiy2kh33mn1hz9yhqlwanr6x\n"
       },
       {
         "version": "v1.15.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.15.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "02ypqvvidygrfnaiph8jnzyazikjsfgwgabbbhfd000pvw4ich2f\n"
       },
       {
         "version": "v1.15.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.15.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1kz5lm9jkr4zi0izlffdhza5avlmkvk08dyz530fk1ny2dy9fljr\n"
       },
       {
         "version": "v1.14.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.14.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0h94rc4kk4j493475gv8011xl80r6s7dkfc5n0xd6hqlfns1ar21\n"
       },
       {
         "version": "v1.14.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.14.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1b9477ss871s3d9d0cp1ykdn38y0c7p4sz2ij2czj0701h1fz6z3\n"
       },
       {
         "version": "v1.14.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.14.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0344iqngx91lhyddm2r7fk1v3kkjaayjgh349wz2gkpshrb69xx1\n"
       },
       {
         "version": "v1.14.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.14.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "130h833agxd84asnl2fvldcysqgz820l2vqf6hyw4vycymibbrk6\n"
       },
       {
         "version": "v1.13.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.13.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0asns1j1dllvjlzbw32fk6mn3nmk6cq7xwkb08pllxykn7hcz1rm\n"
       },
       {
         "version": "v1.13.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.13.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0x839w13grmxd4adl3adkgzlhy4ikxmgvsr97w5ifzr146xwbp67\n"
       },
       {
         "version": "v1.13.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.13.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1zbvyvv6gbmcq79f5xd5ghfhlv11zr1hbldjn6r3mk5qvsp595f1\n"
       },
       {
         "version": "v1.12.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.12.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "07k1l9jpf7pjrkvc002zyz3773k8lzv6c1kilflcs7wyk7nifk4z\n"
       },
       {
         "version": "v1.12.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.12.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1lq5hyny728zr42lb2jjs18kiw1klf9dvwj7lp5rqhwsc9j0f4gc\n"
       },
       {
         "version": "v1.12.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.12.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "17l5pkzsjw7sgjxb6nwx1vlprbiad7zrdh3li99q82p9x5x81ipk\n"
       },
       {
         "version": "v1.11.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.11.5/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0w9fgdda9l2f84l4mnpr8iprbvysy2d6agq9lnxf1784k3f4nh4v\n"
       },
       {
         "version": "v1.11.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.11.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1v65w1r9d9cl2li98glqlbqx4nknna8p51p4x6d4pl7cx0dwfzr7\n"
       },
       {
         "version": "v1.11.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.11.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1pjg3f1awvnzi5vy47i28scnyd1rqnq58xynfr8la04jlcrckn9z\n"
       },
       {
         "version": "v1.11.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.11.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1myxrv5cb3bgcqf80z1s6p58gsi7ak0kzksr88rx3vl1cw2vlk0y\n"
       },
       {
         "version": "v1.11.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.11.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0qq637myc99dc5gghaawy747fcvvnw0nb9xvvxf1xmkqh3bxhdpi\n"
       },
       {
         "version": "v1.11.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.11.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1xw4ciy6gfvm226s7xgp39qyfb7jv8w3wwkz59f3hdfzmf4mvvnw\n"
       },
       {
         "version": "v1.10.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.10.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0bdjbn190lq83qwfmd4cs27k13kb7syl9x7rg5pb7l3a6m0qs9vv\n"
       },
       {
         "version": "v1.10.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.10.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0lr47w6907rkbkkrpbl7pbpffhjxzszdbcsk7m4jzhwxvx81wvzc\n"
       },
       {
         "version": "v1.10.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.10.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0lgci8yk4ngchkwl57pbxhcg24rj6525dz7hkmnf1bggpn55k0nd\n"
       },
       {
         "version": "v1.9.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.9.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1ig1bcki01g6rq6b2gajvzhwsg8znxr5dqv6csrcg60bzy1r9ih5\n"
       },
       {
         "version": "v1.9.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.9.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0cyn3707kggppzh7k1fnb30cjg69n6argc5p1jcm8ri7krqv677w\n"
       },
       {
         "version": "v1.9.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.9.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0i3s5ag9p3jjbqjg8mpv0icwaixybp9mjyayndmrh6d3nlp1sd4l\n"
       },
       {
         "version": "v1.8.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.8.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1h80bg20cy5smy9yrdidqj6pzh3bjw0swj30jvvns84icjcag1cd\n"
       },
       {
         "version": "v1.8.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.8.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1ii6487r5byq0fbm1hsb24jbqzq5c9gczrycjsw1lgn0qwahs7n3\n"
       },
       {
         "version": "v1.8.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.8.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0h6qs07apajpw6d7vsd36za1qv0js219whcs5jbkwk1czbnicsmw\n"
       },
       {
         "version": "v1.8.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.8.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1947zlasa35xf25y48wh3cqx0dvlj529qjl3hbqj18jn5zcf879a\n"
       },
       {
         "version": "v1.7.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.7.5/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0jcgiliw49b9hq87awbaiaxcnwm6gigwx85q0n93a45ixzkyqbjf\n"
       },
       {
         "version": "v1.7.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.7.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1cy0ff5kqwbxiwhfxlxs16mm23xc4w01jx2a2wyhk4aqg36pic5z\n"
       },
       {
         "version": "v1.7.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.7.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0gnm14db1x8rr52yk2nvxlxcdwzx0ybaywqrjfqn8yc7vcjw536z\n"
       },
       {
         "version": "v1.7.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.7.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "19s5yxgnxl4ff1pincxp4xfmiwi6x91wjkhn9j589pfk3fxgg1hd\n"
       },
       {
         "version": "v1.7.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.7.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1krmas401ngk6qr5fqlp8jwpmzn936xsplaf576dvrii46z8ypvs\n"
       },
       {
         "version": "v1.6.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.6.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1xirfjl7ha8fmq3nf330ckiyx1j6hfdnq5wy0fmmbx5psiinqnrw\n"
       },
       {
         "version": "v1.6.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.6.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0zyd8jzymrlqskjfh8byl14z9gijqg27wcm492na34b92jn3ki03\n"
       },
       {
         "version": "v1.6.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.6.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "06vxarrc3m25dm4yf4pf5nr6lz0mqlym5fsg71sr81l66i5nwj80\n"
       },
       {
         "version": "v1.6.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.6.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0dv2k6sg63vxvifad326jb4k36gylnlvry7lkh3rjcjwa4qy61xd\n"
       },
       {
         "version": "v1.5.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.5.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "03zcycdhz7i9vdfwggrmr1yavrswnyr2jh6phyi65v5a4l3yachj\n"
       },
       {
         "version": "v1.5.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.5.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0i6dwnyf6lv1z3a7n7sw8443320mvb2p5g87yfdxnmx031l2jli4\n"
       },
       {
         "version": "v1.5.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.5.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0v4lxb8hz067x3hfg5gnny1i4q5dvcv7c0nlf4g0a6ym4m26j3xd\n"
       },
       {
         "version": "v1.5.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.5.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1997wilk9q3rn91zxf2hr0d8k6fbn23bb32mihqrwap2xn665k6h\n"
       },
       {
         "version": "v1.5.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.5.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "08fd94d3hwwq42z27xwhy0q4y525axa26j7xp2pqxy9b21clhsci\n"
       },
       {
         "version": "v1.4.6",
         "url": "https://github.com/denoland/deno/releases/download/v1.4.6/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "02gamqfav8yqjnz5qcdyhig2hdmilnk6k77djqxhj763iiaa8sfv\n"
       },
       {
         "version": "v1.4.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.4.5/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "16c5xx2nckwssa38cna20g10rwvn7ffxx31ib31n1sv9kr174gcx\n"
       },
       {
         "version": "v1.4.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.4.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "175yi66gpfar73rlppz2j2gaiaky8f9618jghkbs8j9v3gjx4anf\n"
       },
       {
         "version": "v1.4.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.4.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0pwqh58g6lj7jnnnwdib8kzr3sdccccpvnqd2mx8x7gfknjk90iv\n"
       },
       {
         "version": "v1.4.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.4.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1nzx6h9f52pm8blj9yvsc8bmdlkl0wmv5g86yk7b0zi3c83ajxc0\n"
       },
       {
         "version": "v1.4.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.4.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1xxh13ln9nh52v5h3vhbkjsgdwfsjzrr1z934kv3ca39phlfmkkq\n"
       },
       {
         "version": "v1.4.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.4.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0q1b5f7wy2qgs210p8ijaz5rxl9bhp1spy4yx7b5igvrzn9b6lxv\n"
       },
       {
         "version": "v1.3.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.3.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1w1z8nm6ajdk8z79bsz9f85736rap6qpzhvmikh748sxz50alb3f\n"
       },
       {
         "version": "v1.3.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.3.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1q216wx2sl6b1mv3y55ny462v65r9ij86yak5hwy206wdy84cp65\n"
       },
       {
         "version": "v1.3.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.3.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "00fwpzak1gp2272vj6b7zgg26fl8ij8zn76911c11ayfpm08ffpg\n"
       },
       {
         "version": "v1.3.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.3.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "194gcva4drvxm09kxzcka3fbawbqxym4am4pih10j40s92cdrrsy\n"
       },
       {
         "version": "v1.2.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.2.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "189z17mgi0939sgly1fyw7lqph5cx1qwgdcd1khkjj27aig6pilj\n"
       },
       {
         "version": "v1.2.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.2.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1p6n7zcdj85v4sj7r6mdqpdbsc4llnyhjps38az5c4z37a44a2xf\n"
       },
       {
         "version": "v1.2.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.2.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1vxm2zm9jx351sjdllhkvp591q362rmk4g0pqxa21szykrzg9glw\n"
       },
       {
         "version": "v1.2.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.2.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "10fkida8zw5c19sxfs5zikq0s63808rm5icc0nlxg0r2p41sllik\n"
       },
       {
         "version": "v1.1.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.1.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0w55spz2wwhmyifawzrh80g64z6yd91jc96f33d12lp1ypapm1zz\n"
       },
       {
         "version": "v1.1.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.1.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1wrcjmng224522ijzbqkra2x29w01c76623pbvf378qnl2w3v8qg\n"
       },
       {
         "version": "v1.1.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.1.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0wjllvsp11snvf8c865f1fz1y6y9qajw88f7sxb9b1raac539abw\n"
       },
       {
         "version": "v1.1.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.1.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0rdmybnnbfhwkf3rvc9fbrr5g6qkpqb5z5jyl602yqkiz69hacs1\n"
       },
       {
         "version": "v1.0.5",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.5/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1kk7alm27zrjsqjsvqcfkxq7lx1hqfyxc534ym3wkw2r2vvf4068\n"
       },
       {
         "version": "v1.0.4",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.4/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "00v54r62fainb304yzp3mdnzy0byy32w4grqzhir0cq43r5qmca2\n"
       },
       {
         "version": "v1.0.3",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0dc9r0r8w08n107pib78lsiwkmbidigbsjyz8xmwxqlwmkkvkqb3\n"
       },
       {
         "version": "v1.0.2",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0n64hs4svbxa75qxng8h2x92kvq9j1mcwnqyzkas5ch55a1zs1bp\n"
       },
       {
         "version": "v1.0.1",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0fbm0s78ig8xwf2h59dqhc2i279f70jvny7fa4jyhrr48l66pxy7\n"
       },
       {
         "version": "v1.0.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0aknxy9z5cvw091yaw5yf2zynwzxs39ax3jkqdg10xw344jsyn31\n"
       },
       {
         "version": "v1.0.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.0-rc3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "12iiflzr4k6fy2fq9r48x7xggij2hxaii7hb50l696bf5r6r0lk0\n"
       },
       {
         "version": "v1.0.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.0-rc2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "12ln3c1bhixvqs10iy53yypfqrjw3j5d417awm84b06k4shl08lc\n"
       },
       {
         "version": "v1.0.0",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.0-rc1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1is4a1419s22vy46n4lg7jwzs1d2ayzl30vy9s2xihc6p4g6nnsy\n"
       },
       {
         "version": "v1.0.0-rc3",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.0-rc3/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "12iiflzr4k6fy2fq9r48x7xggij2hxaii7hb50l696bf5r6r0lk0\n"
       },
       {
         "version": "v1.0.0-rc2",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.0-rc2/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "12ln3c1bhixvqs10iy53yypfqrjw3j5d417awm84b06k4shl08lc\n"
       },
       {
         "version": "v1.0.0-rc1",
         "url": "https://github.com/denoland/deno/releases/download/v1.0.0-rc1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1is4a1419s22vy46n4lg7jwzs1d2ayzl30vy9s2xihc6p4g6nnsy\n"
       },
       {
         "version": "v0.42.0",
         "url": "https://github.com/denoland/deno/releases/download/v0.42.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "07lpwfiws8p1zjicwrv8p5fgqik04991xpsf5r8gk86mfg3r3qqd\n"
       },
       {
         "version": "v0.41.0",
         "url": "https://github.com/denoland/deno/releases/download/v0.41.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0p0x1f9brb2vk3paixr20cqcvkmxyivlms1flqhjpbf82wk3mw7j\n"
       },
       {
         "version": "v0.40.0",
         "url": "https://github.com/denoland/deno/releases/download/v0.40.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "03qhg72k46rcmqz3y8fz1q35q9rn00bac5jxjclpz3p875jrmv3i\n"
       },
       {
         "version": "v0.39.0",
         "url": "https://github.com/denoland/deno/releases/download/v0.39.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0r2jk7cn9wi4iwvq867rjdk8qz6h0dbhqawv2la3vdbrcam0vd24\n"
       },
       {
         "version": "v0.38.0",
         "url": "https://github.com/denoland/deno/releases/download/v0.38.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "04bcrb7v6hj1rihh4hspwkjddab4xhw8rcrc8s199l12f0i5zpp7\n"
       },
       {
         "version": "v0.37.1",
         "url": "https://github.com/denoland/deno/releases/download/v0.37.1/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "1wjmmnd3gha6cyhbjhaqlia35gy7cw07c0271f78bvaj87kzcxrs\n"
       },
       {
         "version": "v0.37.0",
         "url": "https://github.com/denoland/deno/releases/download/v0.37.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0202x4j4ig4z5zkd7d5wkp82k4qy13bxgnd4vnbyc8n4zm7azhvp\n"
       },
       {
         "version": "v0.36.0",
         "url": "https://github.com/denoland/deno/releases/download/v0.36.0/deno-x86_64-unknown-linux-gnu.zip",
         "arch": "x86_64-linux",
-        "sha256": "hoge"
+        "sha256": "0m7kzcp6qb1y77zrmmpxd5h6mm3209yq2nfspfcn1pfx5fw72al4\n"
       }
     ]
   }
