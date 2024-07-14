@@ -123,6 +123,7 @@ def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_url
     print("Number of versions:", len(versions))
 
     for version in versions:
+        version = version.replace("v", "")
         print("version:", version)
 
         for url in x86_64_linux_urls:
