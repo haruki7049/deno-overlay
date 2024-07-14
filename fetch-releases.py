@@ -41,7 +41,7 @@ def get_all_releases(owner: str, repo: str) -> list:
     return releases
 
 
-def save_to_json(sources: list, filename: str):
+def save_to_json(sources: dict, filename: str):
     """
     Save json to a file
 
@@ -153,7 +153,7 @@ if __name__ == "__main__":
     urls: list = gen_list_of_download_link(deno_info)
     x86_64_linux_urls: list = filter_x86_64_linux_link(urls)
     aarch64_linux_urls: list = filter_aarch64_linux_link(urls)
-    releases_list: list = [{ "deno": gen_releases_list(versions, x86_64_linux_urls, aarch64_linux_urls)}]
+    releases_list: dict = { "deno": gen_releases_list(versions, x86_64_linux_urls, aarch64_linux_urls)}
 
     save_to_json(releases_list, destination)
     print("Done!")
