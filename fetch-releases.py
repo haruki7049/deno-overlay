@@ -97,10 +97,10 @@ def filter_x86_64_linux_link(urls: list) -> list:
     return result
 
 
-def gen_list_of_versions(sources: dict) -> list:
+def gen_list_of_versions(sources: list) -> list:
     result: list = []
 
-    for version in sources["deno"]:
+    for version in sources:
         result.append(version["tag_name"])
 
     return result
@@ -121,7 +121,6 @@ def gen_releases_list(versions: list, urls: list) -> list:
 #    with open("releases.json", "r") as f:
 #        json_data = f.read()
 #
-#    sources: list = json.loads(json_data)
-#    deno_info: dict = sources[0]
+#    deno_info: list = json.loads(json_data)
 #
 #    print(gen_list_of_versions(deno_info))
