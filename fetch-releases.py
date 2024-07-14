@@ -115,3 +115,13 @@ def gen_releases_list(versions: list, urls: list) -> list:
                 result.append({"version": version, "url": url})
 
     return result
+
+
+#if __name__ == "__main__":
+#    with open("releases.json", "r") as f:
+#        json_data = f.read()
+#
+#    sources: list = json.loads(json_data)
+#    deno_info: dict = sources[0]
+#
+#    print(gen_list_of_versions(deno_info))
