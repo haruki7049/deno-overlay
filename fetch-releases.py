@@ -41,7 +41,7 @@ def get_all_releases(owner: str, repo: str) -> list:
     return releases
 
 
-def save_to_json(json: dict, filename: str):
+def save_to_json(sources: dict, filename: str):
     """
     Save json to a file
 
@@ -53,7 +53,7 @@ def save_to_json(json: dict, filename: str):
         File name to save the JSON data
     """
     with open(filename, "w") as file:
-        json.dump(json, file, indent=2)
+        json.dump(sources, file, indent=2)
 
 
 def gen_nix_hash(url: str) -> str:
@@ -77,12 +77,41 @@ def gen_nix_hash(url: str) -> str:
     return result.stdout
 
 
-#if __name__ == "__main__":
-#    owner = "denoland"  # リポジトリの所有者のユーザー名または組織名
-#    repo = "deno"  # リポジトリ名
-#
-#    releases = get_all_releases(owner, repo)
-#    if releases:
-#        save_to_json(releases, "sources.json")
-#        print(f"Releases of {repo} saved to sources.json!!")
-#
+def gen_list_of_download_link(sources: dict) -> list:
+    result: list = []
+
+    for version in sources["deno"]:
+        for assets in version["assets"]:
+            result.append(assets["browser_download_url"])
+
+    return result
+
+
+def filter_x86_64_linux_link(urls: list) -> list:
+    result: list = []
+
+    for url in urls:
+        if "x86_64-unknown-linux-gnu" in url:
+            result.append(url)
+
+    return result
+
+
+def gen_list_of_versions(sources: dict) -> list:
+    result: list = []
+
+    for version in sources["deno"]:
+        result.append(version["tag_name"])
+
+    return result
+
+
+def gen_releases_list(versions: list, urls: list) -> list:
+    result: list = []
+
+    for version in versions:
+        for url in urls:
+            if version in url:
+                result.append({"version": version, "url": url})
+
+    return result
