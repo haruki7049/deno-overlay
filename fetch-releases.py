@@ -91,7 +91,7 @@ def filter_x86_64_linux_link(urls: list) -> list:
     result: list = []
 
     for url in urls:
-        if "x86_64-unknown-linux-gnu" in url:
+        if "deno-x86_64-unknown-linux-gnu" in url:
             result.append(url)
 
     return result
@@ -101,7 +101,7 @@ def filter_aarch64_linux_link(urls: list) -> list:
     result: list = []
 
     for url in urls:
-        if "aarch64-unknown-linux-gnu" in url:
+        if "deno-aarch64-unknown-linux-gnu" in url:
             result.append(url)
 
     return result
@@ -126,17 +126,17 @@ def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_url
         print("version:", version)
 
         for url in x86_64_linux_urls:
-            print("Generating nix hash for", url)
-            sha256 = gen_nix_hash(url)
-
             if version in url:
+                print("Generating nix hash for", url)
+                sha256 = gen_nix_hash(url)
+
                 result.append({"version": version, "url": url, "arch": "x86_64-linux", "sha256": sha256})
 
         for url in aarch64_linux_urls:
-            print("Generating nix hash for", url)
-            sha256 = gen_nix_hash(url)
-
             if version in url:
+                print("Generating nix hash for", url)
+                sha256 = gen_nix_hash(url)
+
                 result.append({"version": version, "url": url, "arch": "aarch64-linux", "sha256": sha256})
 
     return result
