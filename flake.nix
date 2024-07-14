@@ -24,6 +24,7 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             nixd
+            ruff
             python311
           ];
         };
