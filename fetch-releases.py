@@ -118,8 +118,13 @@ def gen_list_of_versions(sources: list) -> list:
 
 def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_urls: list) -> list:
     result: list = []
+    
+    # An message which counts the number of versions
+    print("Number of versions:", len(versions))
 
     for version in versions:
+        print("version:", version)
+
         for url in x86_64_linux_urls:
             print("Generating nix hash for", url)
             sha256 = gen_nix_hash(url)
