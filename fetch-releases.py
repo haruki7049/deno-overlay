@@ -128,10 +128,21 @@ def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_url
             if is_correct_version_url(version, url):
                 print("Generating nix hash for", url)
                 sha256 = gen_nix_hash(url)
+                result.append({"version": version, "url": url, "arch": "x86_64-linux", "sha256": sha256})
 
+            elif is_correct_rc_version_url(version, url):
+                print("Generating nix hash for", url)
+                sha256 = gen_nix_hash(url)
                 result.append({"version": version, "url": url, "arch": "x86_64-linux", "sha256": sha256})
 
     return result
+
+
+def is_correct_rc_version_url(version: str, url: str) -> bool:
+    pattern = r"releases/download/(v\d+\.\d+\.\d+-rc\d+)/deno-"
+    match = re.search(pattern, url)
+    if match:
+        return match.group(1) == version
 
 
 def is_correct_version_url(version: str, url: str) -> bool:
