@@ -122,13 +122,10 @@ def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_url
     # An message which counts the number of versions
     print("Number of versions:", len(versions))
 
-    for version in versions:
-        version = version.replace("v", "")
-        print("version:", version)
-
-        for url in x86_64_linux_urls:
+    for url in x86_64_linux_urls:
+        for version in versions:
             if version in url:
-                print("Generating nix hash for", url)
+                print(f"Fetching hash for {url}")
                 sha256 = gen_nix_hash(url)
 
                 result.append({"version": version, "url": url, "arch": "x86_64-linux", "sha256": sha256})
