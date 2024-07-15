@@ -4,6 +4,7 @@
 import requests
 import subprocess
 import json
+import re
 
 
 def get_all_releases(owner: str, repo: str) -> list:
@@ -118,21 +119,26 @@ def gen_list_of_versions(sources: list) -> list:
 
 def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_urls: list) -> list:
     result: list = []
-    
+
     # An message which counts the number of versions
     print("Number of versions:", len(versions))
 
     for url in x86_64_linux_urls:
         for version in versions:
-            version = version.replace("v", "")
-
-            if version in url:
-                print(f"Fetching hash for {url}")
+            if is_correct_version_url(version, url):
+                print("Generating nix hash for", url)
                 sha256 = gen_nix_hash(url)
 
                 result.append({"version": version, "url": url, "arch": "x86_64-linux", "sha256": sha256})
 
     return result
+
+
+def is_correct_version_url(version: str, url: str) -> bool:
+    pattern = r"releases/download/(v\d+\.\d+\.\d+)/deno-"
+    match = re.search(pattern, url)
+    if match:
+        return match.group(1) == version
 
 
 if __name__ == "__main__":
