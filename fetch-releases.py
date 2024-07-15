@@ -153,12 +153,11 @@ def is_correct_version_url(version: str, url: str) -> bool:
 
 
 if __name__ == "__main__":
+    owner: str = "denoland"
+    repo: str = "deno"
     destination = "sources.json"
 
-    with open("releases.json", "r") as f:
-        json_string = f.read()
-
-    deno_info: list = json.loads(json_string)
+    deno_info: list = get_all_releases(owner, repo)
     versions: list = gen_list_of_versions(deno_info)
     urls: list = gen_list_of_download_link(deno_info)
     x86_64_linux_urls: list = filter_x86_64_linux_link(urls)
