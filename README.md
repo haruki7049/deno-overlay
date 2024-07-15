@@ -19,6 +19,9 @@ pkgs.mkShell {
 }
 ```
 
+## Architectures
+- x86_64-linux
+
 ## A list of versions this overlay can support
 - 1.45.1
 - 1.45.0
