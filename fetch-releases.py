@@ -146,6 +146,25 @@ def is_correct_rc_version_url(version: str, url: str) -> bool:
 
 
 def is_correct_version_url(version: str, url: str) -> bool:
+    """
+    Check if the version in the URL is the same as the version in the release
+
+    Parameters
+    ----------
+    version : str
+        Version of the release
+    url : str
+        URL of the release
+
+    Returns
+    -------
+    bool
+
+    >>> is_correct_version_url("v1.42.0", "https://github.com/denoland/deno/releases/download/v1.4.6/deno-x86_64-unknown-linux-gnu.zip")
+    False
+    >>> is_correct_version_url("v1.4.6", "https://github.com/denoland/deno/releases/download/v1.4.6/deno-x86_64-unknown-linux-gnu.zip")
+    True
+    """
     pattern = r"releases/download/(v\d+\.\d+\.\d+)/deno-"
     match = re.search(pattern, url)
     if match:
