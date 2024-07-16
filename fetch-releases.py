@@ -79,6 +79,19 @@ def gen_nix_hash(url: str) -> str:
 
 
 def gen_list_of_download_link(sources: dict) -> list:
+    """
+    Generate a list of download links from the sources, which was created by get_all_releases
+
+    Parameters
+    ----------
+    sources : dict
+        Sources of the releases
+
+    Returns
+    -------
+    list
+        List of download links
+    """
     result: list = []
 
     for version in sources:
@@ -89,6 +102,19 @@ def gen_list_of_download_link(sources: dict) -> list:
 
 
 def filter_x86_64_linux_link(urls: list) -> list:
+    """
+    Filter x86_64-linux-gnu links from the list of URLs
+
+    Parameters
+    ----------
+    urls : list
+        List of URLs
+
+    Returns
+    -------
+    list
+        List of x86_64-linux-gnu URLs
+    """
     result: list = []
 
     for url in urls:
@@ -99,6 +125,19 @@ def filter_x86_64_linux_link(urls: list) -> list:
 
 
 def filter_aarch64_linux_link(urls: list) -> list:
+    """
+    Filter aarch64-linux-gnu links from the list of URLs
+        
+    Parameters
+    ----------
+    urls : list
+        List of URLs
+
+    Returns
+    -------
+    list
+        List of aarch64-linux-gnu URLs
+    """
     result: list = []
 
     for url in urls:
@@ -109,6 +148,19 @@ def filter_aarch64_linux_link(urls: list) -> list:
 
 
 def gen_list_of_versions(sources: list) -> list:
+    """
+    Generate a list of versions from the sources, which was created by get_all_releases
+
+    Parameters
+    ----------
+    sources : list
+        Sources of the releases
+
+    Returns
+    -------
+    list
+        List of versions
+    """
     result: list = []
 
     for version in sources:
@@ -118,6 +170,23 @@ def gen_list_of_versions(sources: list) -> list:
 
 
 def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_urls: list) -> list:
+    """
+    Generate a list of releases
+
+    Parameters
+    ----------
+    versions : list
+        List of versions
+
+    x86_64_linux_urls : list
+
+    aarch64_linux_urls : list
+
+    Returns
+    -------
+    list
+        List of releases
+    """
     result: list = []
 
     # An message which counts the number of versions
@@ -139,6 +208,19 @@ def gen_releases_list(versions: list, x86_64_linux_urls: list, aarch64_linux_url
 
 
 def is_correct_rc_version_url(version: str, url: str) -> bool:
+    """
+    Check if the version in the URL is the same as the version in the release
+        
+    Parameters
+    ----------
+    version : str
+        Version of the release
+    url : str
+
+    Returns
+    -------
+    bool
+    """
     pattern = r"releases/download/(v\d+\.\d+\.\d+-rc\d+)/deno-"
     match = re.search(pattern, url)
     if match:
