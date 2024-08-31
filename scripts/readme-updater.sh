@@ -1,7 +1,7 @@
 #! /usr/bin/env nix-shell
 #! nix-shell -p bash jq coreutils -i bash
 
-# shellcheck disable=SC1008
+# shellcheck disable=SC1008,SC2016
 
 versions=$(jq ".[].[].version" < sources.json | tr -d \" | sed -e "s/^/- /g")
 readme='# deno-overlay
