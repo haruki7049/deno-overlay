@@ -23,19 +23,27 @@ stdenv.mkDerivation rec {
   src = fetchurl { inherit url sha256; };
   sourceRoot = ".";
 
-  nativeBuildInputs =
-    [ autoPatchelfHook makeWrapper unzip libgcc ];
+  nativeBuildInputs = [
+    autoPatchelfHook
+    makeWrapper
+    unzip
+    libgcc
+  ];
 
-  buildInputs = lib.optionals stdenv.isDarwin
-    ([ libiconv darwin.libobjc ]
-      ++ (with darwin.apple_sdk_11_0.frameworks; [
+  buildInputs = lib.optionals stdenv.isDarwin (
+    [
+      libiconv
+      darwin.libobjc
+    ]
+    ++ (with darwin.apple_sdk_11_0.frameworks; [
       Security
       CoreServices
       Metals
       MetalPerformanceShaders
       Foundation
       QuartzCore
-    ]));
+    ])
+  );
 
   libraries = lib.makeLibraryPath buildInputs;
 

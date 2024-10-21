@@ -1,10 +1,11 @@
-{ pkgs ? import <nixpkgs> {
+{
+  pkgs ? import <nixpkgs> {
     inherit overlays;
-  }
-, overlays ? [
+  },
+  overlays ? [
     (import ../default.nix)
-  ]
-, mkShell ? pkgs.mkShell
+  ],
+  mkShell ? pkgs.mkShell,
 }:
 
 mkShell {

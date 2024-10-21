@@ -2,7 +2,7 @@
   description = "An overlay for Deno javascript runtime";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/23.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
@@ -23,21 +23,27 @@
         inputs.treefmt-nix.flakeModule
       ];
 
-      perSystem = { pkgs, ... }: {
-        treefmt = {
-          projectRootFile = "flake.nix";
-          programs.nixpkgs-fmt.enable = true;
-          programs.ruff.enable = true;
-          programs.actionlint.enable = true;
-          programs.shellcheck.enable = true;
+      perSystem =
+        { pkgs, ... }:
+        {
+          treefmt = {
+            projectRootFile = "flake.nix";
+            programs.nixfmt.enable = true;
+            programs.ruff.enable = true;
+            programs.actionlint.enable = true;
+            programs.shellcheck.enable = true;
+
+            settings.formatter.shellcheck.excludes = [
+              ".envrc"
+            ];
+          };
+          devShells.default = pkgs.mkShell {
+            packages = with pkgs; [
+              nil
+              ruff
+              python311
+            ];
+          };
         };
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-            nil
-            ruff
-            python311
-          ];
-        };
-      };
     };
 }
