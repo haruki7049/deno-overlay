@@ -11,7 +11,6 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    systems.url = "github:nix-systems/default";
   };
 
   outputs =
@@ -20,7 +19,9 @@
       deno-overlay = import ./.;
     in
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = import inputs.systems;
+      systems = [
+        "x86_64-linux"
+      ];
 
       imports = [
         inputs.treefmt-nix.flakeModule
