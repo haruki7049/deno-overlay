@@ -25,8 +25,7 @@
       ];
 
       imports = [
-        inputs.treefmt-nix.flakeModule
-      ];
+        inputs.treefmt-nix.flakeModule ];
 
       flake.overlays = {
         inherit deno-overlay;
@@ -65,11 +64,12 @@
               ".envrc"
             ];
           };
+
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
               nil
-              ruff
-              python311
+              ruby_3_3
+              rubyPackages_3_3.ruby-lsp
             ];
           };
         };
