@@ -56,7 +56,7 @@
           treefmt = {
             projectRootFile = "flake.nix";
             programs.nixfmt.enable = true;
-            programs.ruff.enable = true;
+            programs.rufo.enable = true;
             programs.actionlint.enable = true;
             programs.shellcheck.enable = true;
 
