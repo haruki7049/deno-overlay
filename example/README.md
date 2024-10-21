@@ -2,5 +2,6 @@
 
 To use deno v1.42.0:
 ```bash
-nix-shell ./v1.42.0.nix
+# In /example directory
+nix-build ./v1.42.0
 ```
