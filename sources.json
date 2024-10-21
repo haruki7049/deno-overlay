@@ -7,28 +7,10 @@
       "sha256": "1klhbg79ymgk20242xvx9wql8zwckh6c5gkwb8qighwcxx81h06m"
     },
     {
-      "version": "2.0.2",
-      "url": "https://github.com/denoland/deno/releases/download/v2.0.2/deno-x86_64-unknown-linux-gnu.zip.sha256sum",
-      "arch": "x86_64-linux",
-      "sha256": "0qbh3j7xjp51q04f9gc2s6p47lvk3p6gsb9mj404n5sscgak5k0a"
-    },
-    {
       "version": "2.0.1",
       "url": "https://github.com/denoland/deno/releases/download/v2.0.1/deno-x86_64-unknown-linux-gnu.zip",
       "arch": "x86_64-linux",
       "sha256": "0rzhkfs1js0x4asikpgi5gxyjz1rhxm9n3x7qj0cml5kv1z99ivh"
-    },
-    {
-      "version": "2.0.1",
-      "url": "https://github.com/denoland/deno/releases/download/v2.0.1/deno-x86_64-unknown-linux-gnu.zip.sha256sum",
-      "arch": "x86_64-linux",
-      "sha256": "0hnh5sfdmn4al0264m95gl8axs1wsqgir4ivn2iakcdcp75nyjns"
-    },
-    {
-      "version": "2.0.0",
-      "url": "https://github.com/denoland/deno/releases/download/v2.0.0/deno-x86_64-unknown-linux-gnu.sha256sum",
-      "arch": "x86_64-linux",
-      "sha256": "0d1a58na5j327xzspil85k3fwbcbiw0y9kdpyzj3rv629sp8kp4w"
     },
     {
       "version": "2.0.0",

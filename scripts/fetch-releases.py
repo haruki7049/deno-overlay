@@ -88,11 +88,18 @@ def gen_list_of_download_link(sources: dict) -> list:
     return result
 
 
+def is_x86_64_linux_link(link: str) -> bool:
+    if "deno-x86_64-unknown-linux-gnu" in link and "sha256sum" not in link:
+        return True
+    else:
+        return False
+
+
 def filter_x86_64_linux_link(urls: list) -> list:
     result: list = []
 
     for url in urls:
-        if "deno-x86_64-unknown-linux-gnu" in url:
+        if is_x86_64_linux_link(url):
             result.append(url)
 
     return result
