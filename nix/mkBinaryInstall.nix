@@ -13,14 +13,20 @@
 {
   pname ? "deno",
   version,
-  url,
-  sha256,
+  srcs,
 }:
 
-stdenv.mkDerivation rec {
-  inherit pname version;
+let
+  src-hash-attrs =
+    srcs.${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
+  src = fetchurl {
+    inherit (src-hash-attrs) url sha256;
+  };
+in
 
-  src = fetchurl { inherit url sha256; };
+stdenv.mkDerivation rec {
+  inherit pname version src;
+
   sourceRoot = ".";
 
   nativeBuildInputs = [
@@ -61,7 +67,6 @@ stdenv.mkDerivation rec {
     description = "A secure runtime for JavaScript and TypeScript";
     homepage = "https://deno.land/";
     mainProgram = "deno";
-    platforms = [ "x86_64-linux" ];
     license = lib.licenses.mit;
   };
 }
