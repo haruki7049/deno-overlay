@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'json'
+require "json"
 
 begin
-  versions = JSON.parse(File.read('sources.json')).flat_map { |_, value| value.map { |v| v['version'] } }
+  versions = JSON.parse(File.read("sources.json")).flat_map { |_, value| value.map { |v| v["version"] } }
 rescue => e
   puts "#{e.message}"
 end

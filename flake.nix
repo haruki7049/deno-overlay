@@ -25,7 +25,8 @@
       ];
 
       imports = [
-        inputs.treefmt-nix.flakeModule ];
+        inputs.treefmt-nix.flakeModule
+      ];
 
       flake.overlays = {
         inherit deno-overlay;
