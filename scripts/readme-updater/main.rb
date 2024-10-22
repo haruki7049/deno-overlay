@@ -2,12 +2,7 @@
 
 require "json"
 
-begin
-  versions = JSON.parse(File.read("sources.json")).flat_map { |_, value| value.map { |v| v["version"] } }
-rescue => e
-  puts "#{e.message}"
-end
-
+versions = JSON.parse(File.read("sources.json")).flat_map { |_, value| value.map { |v| v["version"] } }
 formatted_versions = versions.map { |v| "- #{v}" }.join("\n")
 
 readme_template = <<~EOF
