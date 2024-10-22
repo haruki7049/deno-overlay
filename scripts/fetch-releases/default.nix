@@ -29,7 +29,7 @@ stdenv.mkDerivation {
 
     cat > $bin <<EOF
     #!/bin/sh -e
-    exec ${gems}/bin/bundle exec ${ruby}/bin/ruby $out/share/fetch-releases/main.rb "\$@"
+    exec ${gems}/bin/bundle exec ${ruby}/bin/ruby $out/share/fetch-releases/fetch-releases.rb "\$@"
     EOF
 
     chmod 744 $bin
