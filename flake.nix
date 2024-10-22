@@ -70,7 +70,7 @@
             packages = with pkgs; [
               nil
               ruby_3_3
-              rubyPackages_3_3.ruby-lsp
+              rubyPackages_3_3.rubocop
             ];
           };
         };
