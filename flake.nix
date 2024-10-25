@@ -3,6 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    flake-compat.url = "github:edolstra/flake-compat";
+    crane.url = "github:ipetkov/crane";
+    systems.url = "github:nix-systems/default";
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
@@ -11,7 +14,10 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flake-compat.url = "github:edolstra/flake-compat";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -20,9 +26,7 @@
       deno-overlay = import ./.;
     in
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [
-        "x86_64-linux"
-      ];
+      systems = import inputs.systems;
 
       imports = [
         inputs.treefmt-nix.flakeModule
@@ -35,16 +39,29 @@
       perSystem =
         {
           pkgs,
+          lib,
           self',
           system,
           ...
         }:
+        let
+          rust = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
+          craneLib = (inputs.crane.mkLib pkgs).overrideToolchain rust;
+          overlays = [ deno-overlay inputs.rust-overlay.overlays.default ];
+          fetch-releases-bin = craneLib.buildPackage {
+            src = lib.cleanSource ./scripts/fetch-releases/.;
+            strictDeps = true;
+
+            doCheck = true;
+          };
+        in
         {
           _module.args.pkgs = import inputs.nixpkgs {
-            inherit system;
-            overlays = [
-              deno-overlay
-            ];
+            inherit system overlays;
+          };
+
+          packages = {
+            inherit fetch-releases-bin;
           };
 
           checks = {
@@ -65,11 +82,14 @@
               ".envrc"
             ];
           };
+
           devShells.default = pkgs.mkShell {
-            packages = with pkgs; [
-              nil
-              ruff
-              python311
+            packages = [
+              # Rust-lang
+              rust
+
+              # Nix LSP
+              pkgs.nil
             ];
           };
         };
