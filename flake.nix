@@ -57,6 +57,12 @@
 
             doCheck = true;
           };
+          readme-updater-bin = craneLib.buildPackage {
+            src = lib.cleanSource ./scripts/readme-updater/.;
+            strictDeps = true;
+
+            doCheck = true;
+          };
         in
         {
           _module.args.pkgs = import inputs.nixpkgs {
@@ -64,7 +70,7 @@
           };
 
           packages = {
-            inherit fetch-releases-bin;
+            inherit fetch-releases-bin readme-updater-bin;
           };
 
           checks = {
