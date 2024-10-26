@@ -47,7 +47,10 @@
         let
           rust = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
           craneLib = (inputs.crane.mkLib pkgs).overrideToolchain rust;
-          overlays = [ deno-overlay inputs.rust-overlay.overlays.default ];
+          overlays = [
+            deno-overlay
+            inputs.rust-overlay.overlays.default
+          ];
           fetch-releases-bin = craneLib.buildPackage {
             src = lib.cleanSource ./scripts/fetch-releases/.;
             strictDeps = true;
