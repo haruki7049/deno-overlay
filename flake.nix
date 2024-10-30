@@ -52,13 +52,13 @@
             inputs.rust-overlay.overlays.default
           ];
           fetch-releases-bin = craneLib.buildPackage {
-            src = lib.cleanSource ./scripts/fetch-releases/.;
+            src = lib.cleanSource ./tools/fetch-releases/.;
             strictDeps = true;
 
             doCheck = true;
           };
           readme-updater-bin = craneLib.buildPackage {
-            src = lib.cleanSource ./scripts/readme-updater/.;
+            src = lib.cleanSource ./tools/readme-updater/.;
             strictDeps = true;
 
             doCheck = true;
