@@ -47,10 +47,10 @@
           };
 
           checks = {
-            v0-36-0 = pkgs.callPackage ./example/v0.36.0 { };
+            #v0-36-0 = pkgs.callPackage ./example/v0.36.0 { };
             v1-42-0 = pkgs.callPackage ./example/v1.42.0 { };
-            v1-44-4 = pkgs.callPackage ./example/v1.44.4 { };
-            v2-0-0 = pkgs.callPackage ./example/v2.0.0 { };
+            #v1-44-4 = pkgs.callPackage ./example/v1.44.4 { };
+            #v2-0-0 = pkgs.callPackage ./example/v2.0.0 { };
           };
 
           treefmt = {

@@ -10,8 +10,7 @@ self: super: {
         name = v.version;
         value = mkBinaryInstall {
           version = v.version;
-          url = v.url;
-          sha256 = v.sha256;
+          source-attrset = v.srcs;
         };
       }) sources.deno
     );
