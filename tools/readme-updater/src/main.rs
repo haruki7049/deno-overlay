@@ -1,6 +1,6 @@
+use clap::Parser;
 use serde::Deserialize;
 use serde_json::from_reader;
-use clap::Parser;
 use std::fs::File;
 use std::io::BufReader;
 
@@ -36,7 +36,7 @@ pkgs.mkShell {
 
 #[derive(Deserialize, Debug)]
 struct Sources {
-  deno: Vec<Release>,
+    deno: Vec<Release>,
 }
 
 #[derive(Deserialize, Debug)]
@@ -67,17 +67,18 @@ fn main() {
         Ok(o) => o,
         Err(e) => {
             panic!("FATAL ERROR: {}", e);
-        },
+        }
     };
 
     let reader: BufReader<File> = BufReader::new(file);
 
-    let sources: Result<Sources, serde_json::Error> = from_reader::<BufReader<File>, Sources>(reader);
+    let sources: Result<Sources, serde_json::Error> =
+        from_reader::<BufReader<File>, Sources>(reader);
     let sources = match sources {
         Ok(o) => o,
         Err(e) => {
             panic!("JSON PARSE ERROR: {}", e);
-        },
+        }
     };
 
     let releases: Vec<Release> = sources.deno;
@@ -86,7 +87,7 @@ fn main() {
         let mut result: String = String::new();
         for version in versions_list.iter() {
             result.push_str(&(format!("{}\n", version)));
-        };
+        }
 
         result
     };

@@ -94,16 +94,18 @@
           };
 
           devShells.default = pkgs.mkShell {
-            packages = [
-              # Rust-lang
-              rust
+            packages =
+              [
+                # Rust-lang
+                rust
 
-              # Nix LSP
-              pkgs.nil
-            ] ++ lib.optionals pkgs.stdenv.isDarwin [
-	      pkgs.iconv
-	      pkgs.darwin.apple_sdk.frameworks.SystemConfiguration
-	    ];
+                # Nix LSP
+                pkgs.nil
+              ]
+              ++ lib.optionals pkgs.stdenv.isDarwin [
+                pkgs.iconv
+                pkgs.darwin.apple_sdk.frameworks.SystemConfiguration
+              ];
           };
         };
     };
