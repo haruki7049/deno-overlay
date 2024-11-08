@@ -100,7 +100,10 @@
 
               # Nix LSP
               pkgs.nil
-            ];
+            ] ++ lib.optionals pkgs.stdenv.isDarwin [
+	      pkgs.iconv
+	      pkgs.darwin.apple_sdk.frameworks.SystemConfiguration
+	    ];
           };
         };
     };
