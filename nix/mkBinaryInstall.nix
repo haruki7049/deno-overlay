@@ -1,13 +1,12 @@
 {
   lib,
   stdenv,
-  darwin,
   fetchurl,
   autoPatchelfHook,
   makeWrapper,
+
   unzip,
   libgcc,
-  libiconv,
 }:
 
 {
@@ -17,7 +16,7 @@
   sha256,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   inherit pname version;
 
   src = fetchurl { inherit url sha256; };
@@ -30,31 +29,9 @@ stdenv.mkDerivation rec {
     libgcc
   ];
 
-  buildInputs = lib.optionals stdenv.isDarwin (
-    [
-      libiconv
-      darwin.libobjc
-    ]
-    ++ (with darwin.apple_sdk_11_0.frameworks; [
-      Security
-      CoreServices
-      Metals
-      MetalPerformanceShaders
-      Foundation
-      QuartzCore
-    ])
-  );
-
-  libraries = lib.makeLibraryPath buildInputs;
-
   installPhase = ''
     mkdir -p $out/bin
     install -m 0755 deno $out/bin/deno
-  '';
-
-  postFixup = ''
-    wrapProgram $out/bin/deno \
-      --set LD_LIBRARY_PATH ${libraries}
   '';
 
   meta = {
