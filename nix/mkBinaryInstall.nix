@@ -3,7 +3,6 @@
   stdenv,
   fetchurl,
   autoPatchelfHook,
-  makeWrapper,
 
   unzip,
   libgcc,
@@ -24,7 +23,6 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [
     autoPatchelfHook
-    makeWrapper
     unzip
     libgcc
   ];
