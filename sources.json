@@ -1,6 +1,12 @@
 {
   "deno": [
     {
+      "version": "2.4.5",
+      "url": "https://github.com/denoland/deno/releases/download/v2.4.5/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0i24wimyrm8cbmrmxcghw05nhfrj0vlhfib7qp085x9xpcaq37bg"
+    },
+    {
       "version": "2.4.4",
       "url": "https://github.com/denoland/deno/releases/download/v2.4.4/deno-x86_64-unknown-linux-gnu.zip",
       "arch": "x86_64-linux",
