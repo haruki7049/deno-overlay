@@ -1439,6 +1439,336 @@
       "url": "https://github.com/denoland/deno/releases/download/v1.9.1/deno-x86_64-unknown-linux-gnu.zip",
       "arch": "x86_64-linux",
       "sha256": "0cyn3707kggppzh7k1fnb30cjg69n6argc5p1jcm8ri7krqv677w"
+    },
+    {
+      "version": "1.9.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.9.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0i3s5ag9p3jjbqjg8mpv0icwaixybp9mjyayndmrh6d3nlp1sd4l"
+    },
+    {
+      "version": "1.8.3",
+      "url": "https://github.com/denoland/deno/releases/download/v1.8.3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1h80bg20cy5smy9yrdidqj6pzh3bjw0swj30jvvns84icjcag1cd"
+    },
+    {
+      "version": "1.8.2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.8.2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1ii6487r5byq0fbm1hsb24jbqzq5c9gczrycjsw1lgn0qwahs7n3"
+    },
+    {
+      "version": "1.8.1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.8.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0h6qs07apajpw6d7vsd36za1qv0js219whcs5jbkwk1czbnicsmw"
+    },
+    {
+      "version": "1.8.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.8.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1947zlasa35xf25y48wh3cqx0dvlj529qjl3hbqj18jn5zcf879a"
+    },
+    {
+      "version": "1.7.5",
+      "url": "https://github.com/denoland/deno/releases/download/v1.7.5/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0jcgiliw49b9hq87awbaiaxcnwm6gigwx85q0n93a45ixzkyqbjf"
+    },
+    {
+      "version": "1.7.4",
+      "url": "https://github.com/denoland/deno/releases/download/v1.7.4/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1cy0ff5kqwbxiwhfxlxs16mm23xc4w01jx2a2wyhk4aqg36pic5z"
+    },
+    {
+      "version": "1.7.2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.7.2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0gnm14db1x8rr52yk2nvxlxcdwzx0ybaywqrjfqn8yc7vcjw536z"
+    },
+    {
+      "version": "1.7.1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.7.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "19s5yxgnxl4ff1pincxp4xfmiwi6x91wjkhn9j589pfk3fxgg1hd"
+    },
+    {
+      "version": "1.7.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.7.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1krmas401ngk6qr5fqlp8jwpmzn936xsplaf576dvrii46z8ypvs"
+    },
+    {
+      "version": "1.6.3",
+      "url": "https://github.com/denoland/deno/releases/download/v1.6.3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1xirfjl7ha8fmq3nf330ckiyx1j6hfdnq5wy0fmmbx5psiinqnrw"
+    },
+    {
+      "version": "1.6.2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.6.2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0zyd8jzymrlqskjfh8byl14z9gijqg27wcm492na34b92jn3ki03"
+    },
+    {
+      "version": "1.6.1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.6.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "06vxarrc3m25dm4yf4pf5nr6lz0mqlym5fsg71sr81l66i5nwj80"
+    },
+    {
+      "version": "1.6.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.6.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0dv2k6sg63vxvifad326jb4k36gylnlvry7lkh3rjcjwa4qy61xd"
+    },
+    {
+      "version": "1.5.4",
+      "url": "https://github.com/denoland/deno/releases/download/v1.5.4/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "03zcycdhz7i9vdfwggrmr1yavrswnyr2jh6phyi65v5a4l3yachj"
+    },
+    {
+      "version": "1.5.3",
+      "url": "https://github.com/denoland/deno/releases/download/v1.5.3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0i6dwnyf6lv1z3a7n7sw8443320mvb2p5g87yfdxnmx031l2jli4"
+    },
+    {
+      "version": "1.5.2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.5.2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0v4lxb8hz067x3hfg5gnny1i4q5dvcv7c0nlf4g0a6ym4m26j3xd"
+    },
+    {
+      "version": "1.5.1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.5.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1997wilk9q3rn91zxf2hr0d8k6fbn23bb32mihqrwap2xn665k6h"
+    },
+    {
+      "version": "1.5.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.5.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "08fd94d3hwwq42z27xwhy0q4y525axa26j7xp2pqxy9b21clhsci"
+    },
+    {
+      "version": "1.4.6",
+      "url": "https://github.com/denoland/deno/releases/download/v1.4.6/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "02gamqfav8yqjnz5qcdyhig2hdmilnk6k77djqxhj763iiaa8sfv"
+    },
+    {
+      "version": "1.4.5",
+      "url": "https://github.com/denoland/deno/releases/download/v1.4.5/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "16c5xx2nckwssa38cna20g10rwvn7ffxx31ib31n1sv9kr174gcx"
+    },
+    {
+      "version": "1.4.4",
+      "url": "https://github.com/denoland/deno/releases/download/v1.4.4/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "175yi66gpfar73rlppz2j2gaiaky8f9618jghkbs8j9v3gjx4anf"
+    },
+    {
+      "version": "1.4.3",
+      "url": "https://github.com/denoland/deno/releases/download/v1.4.3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0pwqh58g6lj7jnnnwdib8kzr3sdccccpvnqd2mx8x7gfknjk90iv"
+    },
+    {
+      "version": "1.4.2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.4.2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1nzx6h9f52pm8blj9yvsc8bmdlkl0wmv5g86yk7b0zi3c83ajxc0"
+    },
+    {
+      "version": "1.4.1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.4.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1xxh13ln9nh52v5h3vhbkjsgdwfsjzrr1z934kv3ca39phlfmkkq"
+    },
+    {
+      "version": "1.4.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.4.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0q1b5f7wy2qgs210p8ijaz5rxl9bhp1spy4yx7b5igvrzn9b6lxv"
+    },
+    {
+      "version": "1.3.3",
+      "url": "https://github.com/denoland/deno/releases/download/v1.3.3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1w1z8nm6ajdk8z79bsz9f85736rap6qpzhvmikh748sxz50alb3f"
+    },
+    {
+      "version": "1.3.2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.3.2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1q216wx2sl6b1mv3y55ny462v65r9ij86yak5hwy206wdy84cp65"
+    },
+    {
+      "version": "1.3.1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.3.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "00fwpzak1gp2272vj6b7zgg26fl8ij8zn76911c11ayfpm08ffpg"
+    },
+    {
+      "version": "1.3.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.3.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "194gcva4drvxm09kxzcka3fbawbqxym4am4pih10j40s92cdrrsy"
+    },
+    {
+      "version": "1.2.3",
+      "url": "https://github.com/denoland/deno/releases/download/v1.2.3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "189z17mgi0939sgly1fyw7lqph5cx1qwgdcd1khkjj27aig6pilj"
+    },
+    {
+      "version": "1.2.2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.2.2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1p6n7zcdj85v4sj7r6mdqpdbsc4llnyhjps38az5c4z37a44a2xf"
+    },
+    {
+      "version": "1.2.1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.2.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1vxm2zm9jx351sjdllhkvp591q362rmk4g0pqxa21szykrzg9glw"
+    },
+    {
+      "version": "1.2.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.2.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "10fkida8zw5c19sxfs5zikq0s63808rm5icc0nlxg0r2p41sllik"
+    },
+    {
+      "version": "1.1.3",
+      "url": "https://github.com/denoland/deno/releases/download/v1.1.3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0w55spz2wwhmyifawzrh80g64z6yd91jc96f33d12lp1ypapm1zz"
+    },
+    {
+      "version": "1.1.2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.1.2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1wrcjmng224522ijzbqkra2x29w01c76623pbvf378qnl2w3v8qg"
+    },
+    {
+      "version": "1.1.1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.1.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0wjllvsp11snvf8c865f1fz1y6y9qajw88f7sxb9b1raac539abw"
+    },
+    {
+      "version": "1.1.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.1.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0rdmybnnbfhwkf3rvc9fbrr5g6qkpqb5z5jyl602yqkiz69hacs1"
+    },
+    {
+      "version": "1.0.5",
+      "url": "https://github.com/denoland/deno/releases/download/v1.0.5/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1kk7alm27zrjsqjsvqcfkxq7lx1hqfyxc534ym3wkw2r2vvf4068"
+    },
+    {
+      "version": "1.0.4",
+      "url": "https://github.com/denoland/deno/releases/download/v1.0.4/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "00v54r62fainb304yzp3mdnzy0byy32w4grqzhir0cq43r5qmca2"
+    },
+    {
+      "version": "1.0.3",
+      "url": "https://github.com/denoland/deno/releases/download/v1.0.3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0dc9r0r8w08n107pib78lsiwkmbidigbsjyz8xmwxqlwmkkvkqb3"
+    },
+    {
+      "version": "1.0.2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.0.2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0n64hs4svbxa75qxng8h2x92kvq9j1mcwnqyzkas5ch55a1zs1bp"
+    },
+    {
+      "version": "1.0.1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.0.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0fbm0s78ig8xwf2h59dqhc2i279f70jvny7fa4jyhrr48l66pxy7"
+    },
+    {
+      "version": "1.0.0",
+      "url": "https://github.com/denoland/deno/releases/download/v1.0.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0aknxy9z5cvw091yaw5yf2zynwzxs39ax3jkqdg10xw344jsyn31"
+    },
+    {
+      "version": "1.0.0-rc3",
+      "url": "https://github.com/denoland/deno/releases/download/v1.0.0-rc3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "12iiflzr4k6fy2fq9r48x7xggij2hxaii7hb50l696bf5r6r0lk0"
+    },
+    {
+      "version": "1.0.0-rc2",
+      "url": "https://github.com/denoland/deno/releases/download/v1.0.0-rc2/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "12ln3c1bhixvqs10iy53yypfqrjw3j5d417awm84b06k4shl08lc"
+    },
+    {
+      "version": "1.0.0-rc1",
+      "url": "https://github.com/denoland/deno/releases/download/v1.0.0-rc1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1is4a1419s22vy46n4lg7jwzs1d2ayzl30vy9s2xihc6p4g6nnsy"
+    },
+    {
+      "version": "0.42.0",
+      "url": "https://github.com/denoland/deno/releases/download/v0.42.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "07lpwfiws8p1zjicwrv8p5fgqik04991xpsf5r8gk86mfg3r3qqd"
+    },
+    {
+      "version": "0.41.0",
+      "url": "https://github.com/denoland/deno/releases/download/v0.41.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0p0x1f9brb2vk3paixr20cqcvkmxyivlms1flqhjpbf82wk3mw7j"
+    },
+    {
+      "version": "0.40.0",
+      "url": "https://github.com/denoland/deno/releases/download/v0.40.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "03qhg72k46rcmqz3y8fz1q35q9rn00bac5jxjclpz3p875jrmv3i"
+    },
+    {
+      "version": "0.39.0",
+      "url": "https://github.com/denoland/deno/releases/download/v0.39.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0r2jk7cn9wi4iwvq867rjdk8qz6h0dbhqawv2la3vdbrcam0vd24"
+    },
+    {
+      "version": "0.38.0",
+      "url": "https://github.com/denoland/deno/releases/download/v0.38.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "04bcrb7v6hj1rihh4hspwkjddab4xhw8rcrc8s199l12f0i5zpp7"
+    },
+    {
+      "version": "0.37.1",
+      "url": "https://github.com/denoland/deno/releases/download/v0.37.1/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "1wjmmnd3gha6cyhbjhaqlia35gy7cw07c0271f78bvaj87kzcxrs"
+    },
+    {
+      "version": "0.37.0",
+      "url": "https://github.com/denoland/deno/releases/download/v0.37.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0202x4j4ig4z5zkd7d5wkp82k4qy13bxgnd4vnbyc8n4zm7azhvp"
+    },
+    {
+      "version": "0.36.0",
+      "url": "https://github.com/denoland/deno/releases/download/v0.36.0/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "0m7kzcp6qb1y77zrmmpxd5h6mm3209yq2nfspfcn1pfx5fw72al4"
     }
   ]
 }
