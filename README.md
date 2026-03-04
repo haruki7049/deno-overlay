@@ -23,6 +23,7 @@ pkgs.mkShell {
 - x86_64-linux
 
 ## A list of versions this overlay can support
+- 2.7.2
 - 2.7.1
 - 2.7.0
 - 2.6.10
