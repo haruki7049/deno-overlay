@@ -46,6 +46,10 @@
             ];
           };
 
+          packages = {
+            default = pkgs.deno."0.36.0";
+          };
+
           checks = {
             v0-36-0 = pkgs.deno."0.36.0";
             v1-42-0 = pkgs.deno."1.42.0";
@@ -65,6 +69,7 @@
               ".envrc"
             ];
           };
+
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
               nil
