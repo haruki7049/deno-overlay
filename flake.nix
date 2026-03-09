@@ -47,7 +47,7 @@
           };
 
           packages = {
-            default = pkgs.deno."2.0.0";
+            default = pkgs.deno."0.36.0";
           };
 
           checks = {

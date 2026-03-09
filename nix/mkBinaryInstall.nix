@@ -36,6 +36,13 @@ stdenv.mkDerivation {
     install -m 0755 deno $out/bin/deno
   '';
 
+  postIntall = lib.optionalString canExecute ''
+    installShellCompletion --cmd deno \
+      --bash <($out/bin/deno completions bash) \
+      --fish <($out/bin/deno completions fish \
+      --zsh <($out/bin/deno completions zsh)
+  '';
+
   doInstallCheck = canExecute;
 
   meta = {
