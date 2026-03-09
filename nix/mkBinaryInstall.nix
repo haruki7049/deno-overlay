@@ -15,6 +15,10 @@
   sha256,
 }:
 
+let
+  canExecute = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
+in
+
 stdenv.mkDerivation {
   inherit pname version;
 
@@ -31,6 +35,8 @@ stdenv.mkDerivation {
     mkdir -p $out/bin
     install -m 0755 deno $out/bin/deno
   '';
+
+  doInstallCheck = canExecute;
 
   meta = {
     description = "A secure runtime for JavaScript and TypeScript";
