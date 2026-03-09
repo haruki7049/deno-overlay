@@ -28,6 +28,7 @@ pkgs.mkShell {
 ## Architectures
 - x86_64-linux
 
-## A list of versions this overlay can support'
+## A list of versions this overlay can support
+'
 
-printf "%s\n%s" "$readme" "$versions" > README.md
+printf "%s\n%s\n" "$readme" "$versions" > README.md
