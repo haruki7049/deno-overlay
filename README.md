@@ -24,6 +24,7 @@ pkgs.mkShell {
 
 ## A list of versions this overlay can support
 
+- 2.7.13
 - 2.7.12
 - 2.7.11
 - 2.7.10
