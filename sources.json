@@ -736,7 +736,7 @@
       "version": "1.39.4",
       "url": "https://github.com/denoland/deno/releases/download/v1.39.4/deno-x86_64-unknown-linux-gnu.zip",
       "arch": "x86_64-linux",
-      "sha256": "1792bzzbi00z0i7fyqrz7qx7ncdvgxb9r5dbfwjbqd145h91dfai"
+      "sha256": ""
     },
     {
       "version": "1.39.3",
