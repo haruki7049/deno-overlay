@@ -1450,7 +1450,7 @@
       "version": "1.12.1",
       "url": "https://github.com/denoland/deno/releases/download/v1.12.1/deno-x86_64-unknown-linux-gnu.zip",
       "arch": "x86_64-linux",
-      "sha256": ""
+      "sha256": "1lq5hyny728zr42lb2jjs18kiw1klf9dvwj7lp5rqhwsc9j0f4gc"
     },
     {
       "version": "1.12.0",
