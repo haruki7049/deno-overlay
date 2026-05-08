@@ -1,5 +1,7 @@
 #!/usr/bin/env -S deno run --allow-net --allow-run --allow-write --allow-env
 
+import { Logger } from "./logger.ts";
+
 type GitHubReleaseAsset = {
   browser_download_url: string;
 };
@@ -19,7 +21,6 @@ type SourceEntry = {
 const OWNER = "denoland";
 const REPO = "deno";
 const DESTINATION = "sources.json";
-const HASH_CONCURRENCY = 8;
 
 const RELEASE_VERSION_URL_PATTERN =
   /releases\/download\/(v\d+\.\d+\.\d+(?:-rc\d+)?)\/deno-/;
@@ -127,7 +128,7 @@ async function sourceEntryfromUrl(
     throw Error(`The extracted version is unknown: ${url}`);
   }
 
-  console.log("Generating nix hash for", url);
+  Logger.debug(`Generating nix hash for: ${url}`);
   const sha256 = await genNixHash(url);
   return {
     version: version.replace("v", ""),
@@ -143,7 +144,7 @@ async function genReleasesList(
 ): Promise<SourceEntry[]> {
   const results: SourceEntry[] = [];
   const knownVersions = new Set(versions);
-  console.log("Number of versions:", versions.length);
+  Logger.debug(`Number of versions: ${versions.length}`);
 
   for (const url of x86_64LinuxUrls) {
     const sourceEntry = await sourceEntryfromUrl(url, knownVersions);
@@ -160,7 +161,7 @@ async function main(): Promise<void> {
   const x86_64LinuxUrls = filterX86_64LinuxLinks(urls);
   const releasesList = await genReleasesList(versions, x86_64LinuxUrls);
   await saveToJson({ deno: releasesList }, DESTINATION);
-  console.log("Done!");
+  Logger.info("Done!");
 }
 
 if (import.meta.main) {
