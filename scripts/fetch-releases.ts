@@ -94,33 +94,32 @@ function genListOfVersions(releases: GitHubRelease[]): string[] {
 }
 
 async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): Promise<SourceEntry[]> {
-  const result: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
 
-  for (const url of x86_64LinuxUrls) {
+  const entries = await Promise.all(x86_64LinuxUrls.map(async (url): Promise<SourceEntry | null> => {
     const version = extractVersionFromUrl(url);
     if (!version) {
       console.warn("Skipping URL because version could not be extracted:", url);
-      continue;
+      return null;
     }
 
     if (!knownVersions.has(version)) {
       console.warn("Skipping URL because extracted version is unknown:", url);
-      continue;
+      return null;
     }
 
     console.log("Generating nix hash for", url);
     const sha256 = await genNixHash(url);
-    result.push({
+    return {
       version: version.replace("v", ""),
       url,
       arch: "x86_64-linux",
       sha256,
-    });
-  }
+    };
+  }));
 
-  return result;
+  return entries.filter((entry): entry is SourceEntry => entry !== null);
 }
 
 async function main(): Promise<void> {
