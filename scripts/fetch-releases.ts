@@ -95,9 +95,9 @@ function genListOfVersions(releases: GitHubRelease[]): string[] {
 }
 
 async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): Promise<SourceEntry[]> {
+  const result: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
-  const result: SourceEntry[] = [];
 
   for (let i = 0; i < x86_64LinuxUrls.length; i += HASH_CONCURRENCY) {
     const batch = x86_64LinuxUrls.slice(i, i + HASH_CONCURRENCY);
