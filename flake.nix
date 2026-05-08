@@ -59,15 +59,20 @@
           };
 
           treefmt = {
-            projectRootFile = "flake.nix";
-            programs.nixfmt.enable = true;
-            programs.ruff.enable = true;
-            programs.actionlint.enable = true;
-            programs.shellcheck.enable = true;
+            projectRootFile = ".git/config";
 
-            settings.formatter.shellcheck.excludes = [
-              ".envrc"
-            ];
+            # Nix
+            programs.nixfmt.enable = true;
+
+            # Python
+            programs.ruff.enable = true;
+
+            # GitHub Action
+            programs.actionlint.enable = true;
+
+            # Shell Script
+            programs.shellcheck.enable = true;
+            programs.shfmt.enable = true;
           };
 
           devShells.default = pkgs.mkShell {
