@@ -77,8 +77,8 @@ function extractVersionFromUrl(url: string): string | null {
   return null;
 }
 
-function genListOfDownloadLinks(sources: GitHubRelease[]): string[] {
-  return sources.flatMap((version) => version.assets.map((asset) => asset.browser_download_url));
+function genListOfDownloadLinks(releases: GitHubRelease[]): string[] {
+  return releases.flatMap((version) => version.assets.map((asset) => asset.browser_download_url));
 }
 
 function isX86_64LinuxLink(link: string): boolean {
@@ -89,16 +89,16 @@ function filterX86_64LinuxLink(urls: string[]): string[] {
   return urls.filter(isX86_64LinuxLink);
 }
 
-function genListOfVersions(sources: GitHubRelease[]): string[] {
-  return sources.map((version) => version.tag_name);
+function genListOfVersions(releases: GitHubRelease[]): string[] {
+  return releases.map((version) => version.tag_name);
 }
 
-async function genReleasesList(versions: string[], x8664LinuxUrls: string[]): Promise<SourceEntry[]> {
+async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): Promise<SourceEntry[]> {
   const result: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
 
-  for (const url of x8664LinuxUrls) {
+  for (const url of x86_64LinuxUrls) {
     const version = extractVersionFromUrl(url);
     if (!version) {
       console.warn("Skipping URL because version could not be extracted:", url);
