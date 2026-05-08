@@ -21,14 +21,19 @@ const REPO = "deno";
 const DESTINATION = "sources.json";
 const HASH_CONCURRENCY = 8;
 
-const RELEASE_VERSION_URL_PATTERN = /releases\/download\/(v\d+\.\d+\.\d+(?:-rc\d+)?)\/deno-/;
+const RELEASE_VERSION_URL_PATTERN =
+  /releases\/download\/(v\d+\.\d+\.\d+(?:-rc\d+)?)\/deno-/;
 
-async function getAllReleases(owner: string, repo: string): Promise<GitHubRelease[]> {
+async function getAllReleases(
+  owner: string,
+  repo: string,
+): Promise<GitHubRelease[]> {
   const releases: GitHubRelease[] = [];
   let page = 1;
 
   while (true) {
-    const url = `https://api.github.com/repos/${owner}/${repo}/releases?page=${page}`;
+    const url =
+      `https://api.github.com/repos/${owner}/${repo}/releases?page=${page}`;
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -49,7 +54,10 @@ async function getAllReleases(owner: string, repo: string): Promise<GitHubReleas
   return releases;
 }
 
-function saveToJson(sources: { deno: SourceEntry[] }, destination: string): Promise<void> {
+function saveToJson(
+  sources: { deno: SourceEntry[] },
+  destination: string,
+): Promise<void> {
   return Deno.writeTextFile(destination, JSON.stringify(sources, null, 2));
 }
 
@@ -79,11 +87,14 @@ function extractVersionFromUrl(url: string): string | null {
 }
 
 function genListOfDownloadLinks(releases: GitHubRelease[]): string[] {
-  return releases.flatMap((version) => version.assets.map((asset) => asset.browser_download_url));
+  return releases.flatMap((version) =>
+    version.assets.map((asset) => asset.browser_download_url)
+  );
 }
 
 function isX86_64LinuxLink(link: string): boolean {
-  return link.includes("deno-x86_64-unknown-linux-gnu") && !link.includes("sha256sum");
+  return link.includes("deno-x86_64-unknown-linux-gnu") &&
+    !link.includes("sha256sum");
 }
 
 function filterX86_64LinuxLinks(urls: string[]): string[] {
@@ -94,35 +105,55 @@ function genListOfVersions(releases: GitHubRelease[]): string[] {
   return releases.map((version) => version.tag_name);
 }
 
-async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): Promise<SourceEntry[]> {
+async function genReleasesList(
+  versions: string[],
+  x86_64LinuxUrls: string[],
+): Promise<SourceEntry[]> {
   const result: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
 
-  for (let batchStartIndex = 0; batchStartIndex < x86_64LinuxUrls.length; batchStartIndex += HASH_CONCURRENCY) {
-    const batch = x86_64LinuxUrls.slice(batchStartIndex, batchStartIndex + HASH_CONCURRENCY);
-    const batchEntries = await Promise.all(batch.map(async (url): Promise<SourceEntry | null> => {
-      const version = extractVersionFromUrl(url);
-      if (!version) {
-        console.warn("Skipping URL because version could not be extracted:", url);
-        return null;
-      }
+  for (
+    let batchStartIndex = 0;
+    batchStartIndex < x86_64LinuxUrls.length;
+    batchStartIndex += HASH_CONCURRENCY
+  ) {
+    const batch = x86_64LinuxUrls.slice(
+      batchStartIndex,
+      batchStartIndex + HASH_CONCURRENCY,
+    );
+    const batchEntries = await Promise.all(
+      batch.map(async (url): Promise<SourceEntry | null> => {
+        const version = extractVersionFromUrl(url);
+        if (!version) {
+          console.warn(
+            "Skipping URL because version could not be extracted:",
+            url,
+          );
+          return null;
+        }
 
-      if (!knownVersions.has(version)) {
-        console.warn("Skipping URL because extracted version is unknown:", url);
-        return null;
-      }
+        if (!knownVersions.has(version)) {
+          console.warn(
+            "Skipping URL because extracted version is unknown:",
+            url,
+          );
+          return null;
+        }
 
-      console.log("Generating nix hash for", url);
-      const sha256 = await genNixHash(url);
-      return {
-        version: version.replace("v", ""),
-        url,
-        arch: "x86_64-linux",
-        sha256,
-      };
-    }));
-    result.push(...batchEntries.filter((entry): entry is SourceEntry => entry !== null));
+        console.log("Generating nix hash for", url);
+        const sha256 = await genNixHash(url);
+        return {
+          version: version.replace("v", ""),
+          url,
+          arch: "x86_64-linux",
+          sha256,
+        };
+      }),
+    );
+    result.push(
+      ...batchEntries.filter((entry): entry is SourceEntry => entry !== null),
+    );
   }
 
   return result;
