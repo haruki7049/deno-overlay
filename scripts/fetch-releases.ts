@@ -99,8 +99,8 @@ async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): P
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
 
-  for (let i = 0; i < x86_64LinuxUrls.length; i += HASH_CONCURRENCY) {
-    const batch = x86_64LinuxUrls.slice(i, i + HASH_CONCURRENCY);
+  for (let batchStartIndex = 0; batchStartIndex < x86_64LinuxUrls.length; batchStartIndex += HASH_CONCURRENCY) {
+    const batch = x86_64LinuxUrls.slice(batchStartIndex, batchStartIndex + HASH_CONCURRENCY);
     const batchEntries = await Promise.all(batch.map(async (url): Promise<SourceEntry | null> => {
       const version = extractVersionFromUrl(url);
       if (!version) {
