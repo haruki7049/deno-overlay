@@ -1,4 +1,4 @@
-#!/usr/bin/env -S deno run --allow-net --allow-run --allow-write
+#!/usr/bin/env -S deno run --allow-net --allow-run --allow-write --allow-env
 
 type GitHubReleaseAsset = {
   browser_download_url: string;
@@ -34,12 +34,21 @@ async function getAllReleases(
   while (true) {
     const url =
       `https://api.github.com/repos/${owner}/${repo}/releases?page=${page}`;
-    const response = await fetch(url);
+
+    // Define headers
+    const headers: HeadersInit = {};
+    const token = Deno.env.get("GITHUB_TOKEN");
+
+    // Add Authorization header if token exists
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+
+    const response = await fetch(url, { headers });
 
     if (!response.ok) {
       const body = await response.text();
-      console.error(`Failed to fetch releases: ${response.status} - ${body}`);
-      break;
+      throw new Error(`Failed to fetch releases: ${response.status} - ${body}`);
     }
 
     const releasesPage = (await response.json()) as GitHubRelease[];
@@ -105,58 +114,43 @@ function genListOfVersions(releases: GitHubRelease[]): string[] {
   return releases.map((version) => version.tag_name);
 }
 
+async function sourceEntryfromUrl(
+  url: string,
+  knownVersions: Set<string>,
+): Promise<SourceEntry> {
+  const version = extractVersionFromUrl(url);
+  if (!version) {
+    throw Error(`The version could not be extracted: ${url}`);
+  }
+
+  if (!knownVersions.has(version)) {
+    throw Error(`The extracted version is unknown: ${url}`);
+  }
+
+  console.log("Generating nix hash for", url);
+  const sha256 = await genNixHash(url);
+  return {
+    version: version.replace("v", ""),
+    url,
+    arch: "x86_64-linux",
+    sha256,
+  };
+}
+
 async function genReleasesList(
   versions: string[],
   x86_64LinuxUrls: string[],
 ): Promise<SourceEntry[]> {
-  const result: SourceEntry[] = [];
+  const results: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
 
-  for (
-    let batchStartIndex = 0;
-    batchStartIndex < x86_64LinuxUrls.length;
-    batchStartIndex += HASH_CONCURRENCY
-  ) {
-    const batch = x86_64LinuxUrls.slice(
-      batchStartIndex,
-      batchStartIndex + HASH_CONCURRENCY,
-    );
-    const batchEntries = await Promise.all(
-      batch.map(async (url): Promise<SourceEntry | null> => {
-        const version = extractVersionFromUrl(url);
-        if (!version) {
-          console.warn(
-            "Skipping URL because version could not be extracted:",
-            url,
-          );
-          return null;
-        }
-
-        if (!knownVersions.has(version)) {
-          console.warn(
-            "Skipping URL because extracted version is unknown:",
-            url,
-          );
-          return null;
-        }
-
-        console.log("Generating nix hash for", url);
-        const sha256 = await genNixHash(url);
-        return {
-          version: version.replace("v", ""),
-          url,
-          arch: "x86_64-linux",
-          sha256,
-        };
-      }),
-    );
-    result.push(
-      ...batchEntries.filter((entry): entry is SourceEntry => entry !== null),
-    );
+  for (const url of x86_64LinuxUrls) {
+    const sourceEntry = await sourceEntryfromUrl(url, knownVersions);
+    results.push(sourceEntry);
   }
 
-  return result;
+  return results;
 }
 
 async function main(): Promise<void> {
