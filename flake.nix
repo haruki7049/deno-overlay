@@ -71,10 +71,10 @@
           };
 
           devShells.default = pkgs.mkShell {
-            packages = with pkgs; [
-              nil
-              ruff
-              python311
+            nativeBuildInputs = [
+              pkgs.nil
+              pkgs.ruff
+              pkgs.python311
             ];
           };
         };
