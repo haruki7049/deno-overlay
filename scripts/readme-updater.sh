@@ -3,7 +3,7 @@
 
 # shellcheck disable=SC1008,SC2016
 
-versions=$(jq ".[].[].version" < sources.json | tr -d \" | sed -e "s/^/- /g")
+versions=$(jq ".[].[].version" <sources.json | tr -d \" | sed -e "s/^/- /g")
 readme='# deno-overlay
 A Deno overlay for Nix package manager.
 
@@ -31,4 +31,4 @@ pkgs.mkShell {
 ## A list of versions this overlay can support
 '
 
-printf "%s\n%s\n" "$readme" "$versions" > README.md
+printf "%s\n%s\n" "$readme" "$versions" >README.md
