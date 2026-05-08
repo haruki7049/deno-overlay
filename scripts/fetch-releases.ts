@@ -106,7 +106,13 @@ async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): P
 
   for (const url of x86_64LinuxUrls) {
     const version = extractVersionFromUrl(url);
-    if (!version || !knownVersions.has(version)) {
+    if (!version) {
+      console.warn("Skipping URL because version could not be extracted:", url);
+      continue;
+    }
+
+    if (!knownVersions.has(version)) {
+      console.warn("Skipping URL because extracted version is unknown:", url);
       continue;
     }
 
