@@ -77,9 +77,8 @@
 
           devShells.default = pkgs.mkShell {
             nativeBuildInputs = [
-              pkgs.nil
-              pkgs.ruff
-              pkgs.python311
+              pkgs.nil # Nix LSP
+              pkgs.deno."2.0.0" # Deno JavaScript & TypeScript runtime
             ];
           };
         };
