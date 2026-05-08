@@ -20,8 +20,7 @@ const OWNER = "denoland";
 const REPO = "deno";
 const DESTINATION = "sources.json";
 
-const VERSION_URL_PATTERN = /releases\/download\/(v\d+\.\d+\.\d+)\/deno-/;
-const RC_VERSION_URL_PATTERN = /releases\/download\/(v\d+\.\d+\.\d+-rc\d+)\/deno-/;
+const RELEASE_VERSION_URL_PATTERN = /releases\/download\/(v\d+\.\d+\.\d+(?:-rc\d+)?)\/deno-/;
 
 async function getAllReleases(owner: string, repo: string): Promise<GitHubRelease[]> {
   const releases: GitHubRelease[] = [];
@@ -70,14 +69,9 @@ async function genNixHash(url: string): Promise<string> {
 }
 
 function extractVersionFromUrl(url: string): string | null {
-  const releaseMatch = url.match(VERSION_URL_PATTERN);
+  const releaseMatch = url.match(RELEASE_VERSION_URL_PATTERN);
   if (releaseMatch?.[1]) {
     return releaseMatch[1];
-  }
-
-  const rcMatch = url.match(RC_VERSION_URL_PATTERN);
-  if (rcMatch?.[1]) {
-    return rcMatch[1];
   }
 
   return null;
@@ -99,12 +93,12 @@ function genListOfVersions(sources: GitHubRelease[]): string[] {
   return sources.map((version) => version.tag_name);
 }
 
-async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): Promise<SourceEntry[]> {
+async function genReleasesList(versions: string[], x8664LinuxUrls: string[]): Promise<SourceEntry[]> {
   const result: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
 
-  for (const url of x86_64LinuxUrls) {
+  for (const url of x8664LinuxUrls) {
     const version = extractVersionFromUrl(url);
     if (!version) {
       console.warn("Skipping URL because version could not be extracted:", url);
