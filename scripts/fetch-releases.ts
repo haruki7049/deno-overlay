@@ -69,6 +69,20 @@ async function genNixHash(url: string): Promise<string> {
   return new TextDecoder().decode(stdout).trim();
 }
 
+function extractVersionFromUrl(url: string): string | null {
+  const releaseMatch = url.match(VERSION_URL_PATTERN);
+  if (releaseMatch?.[1]) {
+    return releaseMatch[1];
+  }
+
+  const rcMatch = url.match(RC_VERSION_URL_PATTERN);
+  if (rcMatch?.[1]) {
+    return rcMatch[1];
+  }
+
+  return null;
+}
+
 function genListOfDownloadLinks(sources: GitHubRelease[]): string[] {
   return sources.flatMap((version) => version.assets.map((asset) => asset.browser_download_url));
 }
@@ -85,33 +99,25 @@ function genListOfVersions(sources: GitHubRelease[]): string[] {
   return sources.map((version) => version.tag_name);
 }
 
-function isCorrectVersionUrl(version: string, url: string): boolean {
-  const match = url.match(VERSION_URL_PATTERN);
-  return match?.[1] === version;
-}
-
-function isCorrectRcVersionUrl(version: string, url: string): boolean {
-  const match = url.match(RC_VERSION_URL_PATTERN);
-  return match?.[1] === version;
-}
-
 async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): Promise<SourceEntry[]> {
   const result: SourceEntry[] = [];
+  const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
 
   for (const url of x86_64LinuxUrls) {
-    for (const version of versions) {
-      if (isCorrectVersionUrl(version, url) || isCorrectRcVersionUrl(version, url)) {
-        console.log("Generating nix hash for", url);
-        const sha256 = await genNixHash(url);
-        result.push({
-          version: version.replace("v", ""),
-          url,
-          arch: "x86_64-linux",
-          sha256,
-        });
-      }
+    const version = extractVersionFromUrl(url);
+    if (!version || !knownVersions.has(version)) {
+      continue;
     }
+
+    console.log("Generating nix hash for", url);
+    const sha256 = await genNixHash(url);
+    result.push({
+      version: version.replace("v", ""),
+      url,
+      arch: "x86_64-linux",
+      sha256,
+    });
   }
 
   return result;
