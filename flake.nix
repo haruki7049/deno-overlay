@@ -74,6 +74,12 @@
             programs.deno.enable = true;
             programs.deno.package = pkgs.deno."2.0.0";
             settings.formatter.deno.includes = [ "*.ts" ];
+            settings.formatter.deno.excludes = [
+              "*.json"
+              "*.yaml"
+              "*.yml"
+              "*.md"
+            ];
 
             # Shell Script
             programs.shellcheck.enable = true;
