@@ -97,7 +97,7 @@ function genListOfVersions(releases: GitHubRelease[]): string[] {
 async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): Promise<SourceEntry[]> {
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
-  const entries: SourceEntry[] = [];
+  const result: SourceEntry[] = [];
 
   for (let i = 0; i < x86_64LinuxUrls.length; i += HASH_CONCURRENCY) {
     const batch = x86_64LinuxUrls.slice(i, i + HASH_CONCURRENCY);
@@ -122,10 +122,10 @@ async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): P
         sha256,
       };
     }));
-    entries.push(...batchEntries.filter((entry): entry is SourceEntry => entry !== null));
+    result.push(...batchEntries.filter((entry): entry is SourceEntry => entry !== null));
   }
 
-  return entries;
+  return result;
 }
 
 async function main(): Promise<void> {
