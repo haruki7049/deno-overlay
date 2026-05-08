@@ -19,6 +19,7 @@ type SourceEntry = {
 const OWNER = "denoland";
 const REPO = "deno";
 const DESTINATION = "sources.json";
+const HASH_CONCURRENCY = 8;
 
 const RELEASE_VERSION_URL_PATTERN = /releases\/download\/(v\d+\.\d+\.\d+(?:-rc\d+)?)\/deno-/;
 
@@ -96,28 +97,33 @@ function genListOfVersions(releases: GitHubRelease[]): string[] {
 async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): Promise<SourceEntry[]> {
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
+  const entries: Array<SourceEntry | null> = [];
 
-  const entries = await Promise.all(x86_64LinuxUrls.map(async (url): Promise<SourceEntry | null> => {
-    const version = extractVersionFromUrl(url);
-    if (!version) {
-      console.warn("Skipping URL because version could not be extracted:", url);
-      return null;
-    }
+  for (let i = 0; i < x86_64LinuxUrls.length; i += HASH_CONCURRENCY) {
+    const batch = x86_64LinuxUrls.slice(i, i + HASH_CONCURRENCY);
+    const batchEntries = await Promise.all(batch.map(async (url): Promise<SourceEntry | null> => {
+      const version = extractVersionFromUrl(url);
+      if (!version) {
+        console.warn("Skipping URL because version could not be extracted:", url);
+        return null;
+      }
 
-    if (!knownVersions.has(version)) {
-      console.warn("Skipping URL because extracted version is unknown:", url);
-      return null;
-    }
+      if (!knownVersions.has(version)) {
+        console.warn("Skipping URL because extracted version is unknown:", url);
+        return null;
+      }
 
-    console.log("Generating nix hash for", url);
-    const sha256 = await genNixHash(url);
-    return {
-      version: version.replace("v", ""),
-      url,
-      arch: "x86_64-linux",
-      sha256,
-    };
-  }));
+      console.log("Generating nix hash for", url);
+      const sha256 = await genNixHash(url);
+      return {
+        version: version.replace("v", ""),
+        url,
+        arch: "x86_64-linux",
+        sha256,
+      };
+    }));
+    entries.push(...batchEntries);
+  }
 
   return entries.filter((entry): entry is SourceEntry => entry !== null);
 }
