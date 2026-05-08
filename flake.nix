@@ -70,6 +70,11 @@
             # GitHub Action
             programs.actionlint.enable = true;
 
+            # Deno
+            programs.deno.enable = true;
+            programs.deno.package = pkgs.deno."2.0.0";
+            settings.formatter.deno.includes = [ "*.ts" ];
+
             # Shell Script
             programs.shellcheck.enable = true;
             programs.shfmt.enable = true;
