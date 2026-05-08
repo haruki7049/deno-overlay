@@ -85,7 +85,7 @@ function isX86_64LinuxLink(link: string): boolean {
   return link.includes("deno-x86_64-unknown-linux-gnu") && !link.includes("sha256sum");
 }
 
-function filterX86_64LinuxLink(urls: string[]): string[] {
+function filterX8664LinuxLinks(urls: string[]): string[] {
   return urls.filter(isX86_64LinuxLink);
 }
 
@@ -93,12 +93,12 @@ function genListOfVersions(releases: GitHubRelease[]): string[] {
   return releases.map((version) => version.tag_name);
 }
 
-async function genReleasesList(versions: string[], x86_64LinuxUrls: string[]): Promise<SourceEntry[]> {
+async function genReleasesList(versions: string[], x8664LinuxUrls: string[]): Promise<SourceEntry[]> {
   const result: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   console.log("Number of versions:", versions.length);
 
-  for (const url of x86_64LinuxUrls) {
+  for (const url of x8664LinuxUrls) {
     const version = extractVersionFromUrl(url);
     if (!version) {
       console.warn("Skipping URL because version could not be extracted:", url);
@@ -127,8 +127,8 @@ async function main(): Promise<void> {
   const denoInfo = await getAllReleases(OWNER, REPO);
   const versions = genListOfVersions(denoInfo);
   const urls = genListOfDownloadLinks(denoInfo);
-  const x86_64LinuxUrls = filterX86_64LinuxLink(urls);
-  const releasesList = await genReleasesList(versions, x86_64LinuxUrls);
+  const x8664LinuxUrls = filterX8664LinuxLinks(urls);
+  const releasesList = await genReleasesList(versions, x8664LinuxUrls);
   await saveToJson({ deno: releasesList }, DESTINATION);
   console.log("Done!");
 }
