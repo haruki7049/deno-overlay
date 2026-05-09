@@ -14,7 +14,7 @@ type GitHubRelease = {
 type SourceEntry = {
   version: string;
   url: string;
-  arch: "x86_64-linux";
+  arch: "x86_64-linux" | "aarch64-linux";
   sha256: string;
 };
 
@@ -102,14 +102,34 @@ function genListOfDownloadLinks(releases: GitHubRelease[]): string[] {
   );
 }
 
-function isX86_64LinuxLink(link: string): boolean {
-  return link.includes("deno-x86_64-unknown-linux-gnu") &&
+const SUPPORTED_ARCHITECTURES = [
+  {
+    releaseArtifact: "deno-x86_64-unknown-linux-gnu",
+    nixArch: "x86_64-linux" as const,
+  },
+  {
+    releaseArtifact: "deno-aarch64-unknown-linux-gnu",
+    nixArch: "aarch64-linux" as const,
+  },
+];
+
+function isSupportedLinuxLink(link: string): boolean {
+  return SUPPORTED_ARCHITECTURES.some((architecture) =>
+    link.includes(architecture.releaseArtifact)
+  ) &&
     !link.includes("sha256sum") &&
     !link.includes(".bsdiff");
 }
 
-function filterX86_64LinuxLinks(urls: string[]): string[] {
-  return urls.filter(isX86_64LinuxLink);
+function filterSupportedLinuxLinks(urls: string[]): string[] {
+  return urls.filter(isSupportedLinuxLink);
+}
+
+function getArchFromLink(link: string): SourceEntry["arch"] | null {
+  const architecture = SUPPORTED_ARCHITECTURES.find((target) =>
+    link.includes(target.releaseArtifact)
+  );
+  return architecture?.nixArch ?? null;
 }
 
 function genListOfVersions(releases: GitHubRelease[]): string[] {
@@ -131,25 +151,30 @@ async function sourceEntryfromUrl(
     throw Error(`The extracted version is unknown: ${url}`);
   }
 
+  const arch = getArchFromLink(url);
+  if (!arch) {
+    throw Error(`The architecture could not be extracted: ${url}`);
+  }
+
   Logger.debug(`Generating nix hash for: ${url}`);
   const sha256 = await genNixHash(url);
   return {
     version: version.replace("v", ""),
     url,
-    arch: "x86_64-linux",
+    arch,
     sha256,
   };
 }
 
 async function genReleasesList(
   versions: string[],
-  x86_64LinuxUrls: string[],
+  linuxUrls: string[],
 ): Promise<SourceEntry[]> {
   const results: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   Logger.debug(`Number of versions: ${knownVersions.size}`);
 
-  for (const url of x86_64LinuxUrls) {
+  for (const url of linuxUrls) {
     const sourceEntry = await sourceEntryfromUrl(url, knownVersions);
     if (sourceEntry !== null) {
       results.push(sourceEntry);
@@ -163,8 +188,8 @@ async function main(): Promise<void> {
   const denoInfo = await getAllReleases(OWNER, REPO);
   const versions = genListOfVersions(denoInfo);
   const urls = genListOfDownloadLinks(denoInfo);
-  const x86_64LinuxUrls = filterX86_64LinuxLinks(urls);
-  const releasesList = await genReleasesList(versions, x86_64LinuxUrls);
+  const linuxUrls = filterSupportedLinuxLinks(urls);
+  const releasesList = await genReleasesList(versions, linuxUrls);
   await saveToJson({ deno: releasesList }, DESTINATION);
   Logger.info("Done!");
 }
