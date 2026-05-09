@@ -8,13 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.2
-      - uses: denoland/setup-deno@v2
-        with:
-          deno-version: v2.0.x
       - uses: cachix/install-nix-action@v26
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-      - run: deno run --allow-net --allow-run --allow-write ./scripts/fetch-releases.ts
+      - run: nix-shell --run ./scripts/fetch-releases.ts
       - uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
           commit_message: "ci: Update sources.json"
