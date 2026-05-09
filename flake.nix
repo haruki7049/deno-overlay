@@ -70,6 +70,17 @@
             # GitHub Action
             programs.actionlint.enable = true;
 
+            # Deno
+            programs.deno.enable = true;
+            programs.deno.package = pkgs.deno."2.0.0";
+            settings.formatter.deno.includes = [ "*.ts" ];
+            settings.formatter.deno.excludes = [
+              "*.json"
+              "*.yaml"
+              "*.yml"
+              "*.md"
+            ];
+
             # Shell Script
             programs.shellcheck.enable = true;
             programs.shfmt.enable = true;
@@ -77,9 +88,8 @@
 
           devShells.default = pkgs.mkShell {
             nativeBuildInputs = [
-              pkgs.nil
-              pkgs.ruff
-              pkgs.python311
+              pkgs.nil # Nix LSP
+              pkgs.deno."2.0.0" # Deno JavaScript & TypeScript runtime
             ];
           };
         };
