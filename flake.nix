@@ -70,6 +70,9 @@
             # GitHub Action
             programs.actionlint.enable = true;
 
+            # Markdown
+            programs.mdformat.enable = true;
+
             # Deno
             programs.deno.enable = true;
             programs.deno.package = pkgs.deno."2.0.0";
