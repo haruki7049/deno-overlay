@@ -104,7 +104,8 @@ function genListOfDownloadLinks(releases: GitHubRelease[]): string[] {
 
 function isX86_64LinuxLink(link: string): boolean {
   return link.includes("deno-x86_64-unknown-linux-gnu") &&
-    !link.includes("sha256sum");
+    !link.includes("sha256sum") &&
+    !link.includes(".bsdiff");
 }
 
 function filterX86_64LinuxLinks(urls: string[]): string[] {
@@ -118,10 +119,12 @@ function genListOfVersions(releases: GitHubRelease[]): string[] {
 async function sourceEntryfromUrl(
   url: string,
   knownVersions: Set<string>,
-): Promise<SourceEntry> {
+): Promise<SourceEntry | null> {
   const version = extractVersionFromUrl(url);
   if (!version) {
-    throw Error(`The version could not be extracted: ${url}`);
+    Logger.debug(`The version could not be extracted: ${url}`);
+    Logger.debug(`Skipping ${url} ...`);
+    return null;
   }
 
   if (!knownVersions.has(version)) {
@@ -144,11 +147,13 @@ async function genReleasesList(
 ): Promise<SourceEntry[]> {
   const results: SourceEntry[] = [];
   const knownVersions = new Set(versions);
-  Logger.debug(`Number of versions: ${versions.length}`);
+  Logger.debug(`Number of versions: ${knownVersions.size}`);
 
   for (const url of x86_64LinuxUrls) {
     const sourceEntry = await sourceEntryfromUrl(url, knownVersions);
-    results.push(sourceEntry);
+    if (sourceEntry !== null) {
+      results.push(sourceEntry);
+    }
   }
 
   return results;
