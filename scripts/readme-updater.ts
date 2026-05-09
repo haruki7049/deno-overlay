@@ -30,8 +30,7 @@ pkgs.mkShell {
 ## Architectures
 - x86_64-linux
 
-## A list of versions this overlay can support
-`;
+## A list of versions this overlay can support`;
 
 function getVersions(sources: Sources): string[] {
   return Object.values(sources).flatMap((entries) =>
