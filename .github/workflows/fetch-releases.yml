@@ -11,7 +11,9 @@ jobs:
       - uses: cachix/install-nix-action@v26
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-      - run: nix-shell --run ./scripts/fetch-releases.ts
+      - run: nix-shell --run ./scripts/fetch-releases.ts --keep GITHUB_TOKEN
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
           commit_message: "ci: Update sources.json"
