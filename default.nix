@@ -27,7 +27,7 @@ self: super: {
             availableArchs = lib.concatStringsSep ", " (map (entry: entry.arch) versionSources);
           in
           if source == null then
-            throw "No source found for version ${version}; available architectures: ${availableArchs}"
+            throw "No source found for version ${version} on architecture ${system}; available architectures: ${availableArchs}"
           else
             mkBinaryInstall {
               inherit version;
