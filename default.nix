@@ -5,29 +5,29 @@ self: super: {
       sources = lib.importJSON ./sources.json;
       mkBinaryInstall = super.callPackage ./nix/mkBinaryInstall.nix { };
       system = super.stdenv.hostPlatform.system;
-      fallbackArch = "x86_64-linux";
       versions = lib.unique (map (source: source.version) sources.deno);
+      getSourcesForVersion = version: lib.filter (source: source.version == version) sources.deno;
       findSourceForVersion =
         version:
         let
-          systemSource = lib.findFirst (
-            source: source.version == version && source.arch == system
-          ) null sources.deno;
-          fallbackSource = lib.findFirst (
-            source: source.version == version && source.arch == fallbackArch
-          ) null sources.deno;
+          versionSources = getSourcesForVersion version;
         in
-        if systemSource != null then systemSource else fallbackSource;
+        if versionSources == [ ] then
+          null
+        else
+          lib.findFirst (source: source.arch == system) (builtins.head versionSources) versionSources;
     in
     builtins.listToAttrs (
       map (version: {
         name = version;
         value =
           let
+            versionSources = getSourcesForVersion version;
             source = findSourceForVersion version;
+            availableArchs = lib.concatStringsSep ", " (map (entry: entry.arch) versionSources);
           in
           if source == null then
-            throw "No source found for version ${version} on ${system} or fallback architecture ${fallbackArch}"
+            throw "No source found for version ${version}; available architectures: ${availableArchs}"
           else
             mkBinaryInstall {
               inherit version;
