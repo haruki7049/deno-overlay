@@ -5,6 +5,7 @@ self: super: {
       sources = lib.importJSON ./sources.json;
       mkBinaryInstall = super.callPackage ./nix/mkBinaryInstall.nix { };
       system = super.stdenv.hostPlatform.system;
+      fallbackArch = "x86_64-linux";
       versions = lib.unique (map (source: source.version) sources.deno);
       findSourceForVersion =
         version:
@@ -13,7 +14,7 @@ self: super: {
             source: source.version == version && source.arch == system
           ) null sources.deno;
           fallbackSource = lib.findFirst (
-            source: source.version == version && source.arch == "x86_64-linux"
+            source: source.version == version && source.arch == fallbackArch
           ) null sources.deno;
         in
         if systemSource != null then systemSource else fallbackSource;
@@ -25,13 +26,15 @@ self: super: {
           let
             source = findSourceForVersion version;
           in
-          assert source != null;
-          mkBinaryInstall {
-            inherit version;
-            url = source.url;
-            arch = source.arch;
-            sha256 = source.sha256;
-          };
+          if source == null then
+            throw "No source found for version ${version} on ${system} or fallback architecture ${fallbackArch}"
+          else
+            mkBinaryInstall {
+              inherit version;
+              url = source.url;
+              arch = source.arch;
+              sha256 = source.sha256;
+            };
       }) versions
     );
 }
