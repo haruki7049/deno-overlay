@@ -12,11 +12,12 @@
   pname ? "deno",
   version,
   url,
+  arch,
   sha256,
 }:
 
 let
-  canExecute = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
+  canExecute = stdenv.buildPlatform.canExecute stdenv.hostPlatform && stdenv.hostPlatform.system == arch;
 in
 
 stdenv.mkDerivation (finalAttrs: {
@@ -25,11 +26,12 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchurl { inherit url sha256; };
   sourceRoot = ".";
 
-  nativeBuildInputs = [
-    autoPatchelfHook
-    unzip
-    libgcc
-  ];
+  nativeBuildInputs =
+    [ unzip ]
+    ++ lib.optionals stdenv.isLinux [
+      autoPatchelfHook
+      libgcc
+    ];
 
   installPhase = ''
     mkdir -p $out/bin
