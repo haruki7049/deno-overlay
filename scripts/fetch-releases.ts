@@ -14,7 +14,7 @@ type GitHubRelease = {
 type SourceEntry = {
   version: string;
   url: string;
-  arch: "x86_64-linux" | "aarch64-linux";
+  arch: "x86_64-linux" | "aarch64-linux" | "aarch64-darwin";
   sha256: string;
 };
 
@@ -111,9 +111,13 @@ const SUPPORTED_ARCHITECTURES = [
     releaseArtifact: "deno-aarch64-unknown-linux-gnu",
     nixArch: "aarch64-linux" as const,
   },
+  {
+    releaseArtifact: "deno-aarch64-apple-darwin",
+    nixArch: "aarch64-darwin" as const,
+  },
 ];
 
-function isSupportedLinuxLink(link: string): boolean {
+function isSupportedReleaseLink(link: string): boolean {
   return SUPPORTED_ARCHITECTURES.some((architecture) =>
     link.includes(architecture.releaseArtifact)
   ) &&
@@ -121,8 +125,8 @@ function isSupportedLinuxLink(link: string): boolean {
     !link.includes(".bsdiff");
 }
 
-function filterSupportedLinuxLinks(urls: string[]): string[] {
-  return urls.filter(isSupportedLinuxLink);
+function filterSupportedReleaseLinks(urls: string[]): string[] {
+  return urls.filter(isSupportedReleaseLink);
 }
 
 function getArchFromLink(link: string): SourceEntry["arch"] | null {
@@ -168,13 +172,13 @@ async function sourceEntryfromUrl(
 
 async function genReleasesList(
   versions: string[],
-  linuxUrls: string[],
+  releaseUrls: string[],
 ): Promise<SourceEntry[]> {
   const results: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   Logger.debug(`Number of versions: ${knownVersions.size}`);
 
-  for (const url of linuxUrls) {
+  for (const url of releaseUrls) {
     const sourceEntry = await sourceEntryfromUrl(url, knownVersions);
     if (sourceEntry !== null) {
       results.push(sourceEntry);
@@ -188,8 +192,8 @@ async function main(): Promise<void> {
   const denoInfo = await getAllReleases(OWNER, REPO);
   const versions = genListOfVersions(denoInfo);
   const urls = genListOfDownloadLinks(denoInfo);
-  const linuxUrls = filterSupportedLinuxLinks(urls);
-  const releasesList = await genReleasesList(versions, linuxUrls);
+  const releaseUrls = filterSupportedReleaseLinks(urls);
+  const releasesList = await genReleasesList(versions, releaseUrls);
   await saveToJson({ deno: releasesList }, DESTINATION);
   Logger.info("Done!");
 }
