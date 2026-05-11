@@ -58,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
     description = "A secure runtime for JavaScript and TypeScript";
     homepage = "https://deno.land/";
     mainProgram = "deno";
-    platforms = [ "x86_64-linux" ];
+    platforms = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
     license = lib.licenses.mit;
   };
 })
