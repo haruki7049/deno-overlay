@@ -25,6 +25,7 @@ self: super: {
           let
             source = findSourceForVersion version;
           in
+          assert source != null;
           mkBinaryInstall {
             inherit version;
             url = source.url;
