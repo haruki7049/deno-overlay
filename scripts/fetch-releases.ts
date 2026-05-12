@@ -129,6 +129,40 @@ function filterSupportedReleaseLinks(urls: string[]): string[] {
   return urls.filter(isSupportedReleaseLink);
 }
 
+function filterCompleteVersionReleaseLinks(urls: string[]): string[] {
+  const requiredArchitectures = new Set(
+    SUPPORTED_ARCHITECTURES.map((architecture) => architecture.nixArch),
+  );
+  const architectureMap = new Map<string, Set<SourceEntry["arch"]>>();
+
+  for (const url of urls) {
+    const version = extractVersionFromUrl(url);
+    const arch = getArchFromLink(url);
+    if (!version || !arch) {
+      continue;
+    }
+
+    if (!architectureMap.has(version)) {
+      architectureMap.set(version, new Set<SourceEntry["arch"]>());
+    }
+
+    architectureMap.get(version)?.add(arch);
+  }
+
+  const completeVersions = new Set(
+    Array.from(architectureMap.entries())
+      .filter(([, arches]) =>
+        Array.from(requiredArchitectures).every((arch) => arches.has(arch))
+      )
+      .map(([version]) => version),
+  );
+
+  return urls.filter((url) => {
+    const version = extractVersionFromUrl(url);
+    return version !== null && completeVersions.has(version);
+  });
+}
+
 function getArchFromLink(link: string): SourceEntry["arch"] | null {
   const architecture = SUPPORTED_ARCHITECTURES.find((target) =>
     link.includes(target.releaseArtifact)
@@ -192,7 +226,8 @@ async function main(): Promise<void> {
   const denoInfo = await getAllReleases(OWNER, REPO);
   const versions = genListOfVersions(denoInfo);
   const urls = genListOfDownloadLinks(denoInfo);
-  const releaseUrls = filterSupportedReleaseLinks(urls);
+  const supportedReleaseUrls = filterSupportedReleaseLinks(urls);
+  const releaseUrls = filterCompleteVersionReleaseLinks(supportedReleaseUrls);
   const releasesList = await genReleasesList(versions, releaseUrls);
   await saveToJson({ deno: releasesList }, DESTINATION);
   Logger.info("Done!");
