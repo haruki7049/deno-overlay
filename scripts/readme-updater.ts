@@ -32,6 +32,8 @@ pkgs.mkShell {
 ## Architectures
 
 - x86_64-linux
+- aarch64-linux
+- aarch64-darwin
 
 ## A list of versions this overlay can support
 `;
