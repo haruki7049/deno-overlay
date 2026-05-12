@@ -14,7 +14,7 @@ type GitHubRelease = {
 type SourceEntry = {
   version: string;
   url: string;
-  arch: "x86_64-linux";
+  arch: "x86_64-linux" | "aarch64-linux" | "aarch64-darwin";
   sha256: string;
 };
 
@@ -102,14 +102,73 @@ function genListOfDownloadLinks(releases: GitHubRelease[]): string[] {
   );
 }
 
-function isX86_64LinuxLink(link: string): boolean {
-  return link.includes("deno-x86_64-unknown-linux-gnu") &&
+const SUPPORTED_ARCHITECTURES = [
+  {
+    releaseArtifact: "deno-x86_64-unknown-linux-gnu",
+    nixArch: "x86_64-linux" as const,
+  },
+  {
+    releaseArtifact: "deno-aarch64-unknown-linux-gnu",
+    nixArch: "aarch64-linux" as const,
+  },
+  {
+    releaseArtifact: "deno-aarch64-apple-darwin",
+    nixArch: "aarch64-darwin" as const,
+  },
+];
+
+function isSupportedReleaseLink(link: string): boolean {
+  return SUPPORTED_ARCHITECTURES.some((architecture) =>
+    link.includes(architecture.releaseArtifact)
+  ) &&
     !link.includes("sha256sum") &&
     !link.includes(".bsdiff");
 }
 
-function filterX86_64LinuxLinks(urls: string[]): string[] {
-  return urls.filter(isX86_64LinuxLink);
+function filterSupportedReleaseLinks(urls: string[]): string[] {
+  return urls.filter(isSupportedReleaseLink);
+}
+
+function filterCompleteVersionReleaseLinks(urls: string[]): string[] {
+  const requiredArchitectures = SUPPORTED_ARCHITECTURES.map((architecture) =>
+    architecture.nixArch
+  );
+  const architectureMap = new Map<string, Set<SourceEntry["arch"]>>();
+
+  for (const url of urls) {
+    const version = extractVersionFromUrl(url);
+    const arch = getArchFromLink(url);
+    if (!version || !arch) {
+      continue;
+    }
+
+    const archSet = architectureMap.get(version);
+    if (archSet) {
+      archSet.add(arch);
+    } else {
+      architectureMap.set(version, new Set([arch]));
+    }
+  }
+
+  const completeVersions = new Set(
+    Array.from(architectureMap.entries())
+      .filter(([, arches]) =>
+        requiredArchitectures.every((arch) => arches.has(arch))
+      )
+      .map(([version]) => version),
+  );
+
+  return urls.filter((url) => {
+    const version = extractVersionFromUrl(url);
+    return version !== null && completeVersions.has(version);
+  });
+}
+
+function getArchFromLink(link: string): SourceEntry["arch"] | null {
+  const architecture = SUPPORTED_ARCHITECTURES.find((target) =>
+    link.includes(target.releaseArtifact)
+  );
+  return architecture?.nixArch ?? null;
 }
 
 function genListOfVersions(releases: GitHubRelease[]): string[] {
@@ -131,25 +190,30 @@ async function sourceEntryfromUrl(
     throw Error(`The extracted version is unknown: ${url}`);
   }
 
+  const arch = getArchFromLink(url);
+  if (!arch) {
+    throw Error(`The architecture could not be extracted: ${url}`);
+  }
+
   Logger.debug(`Generating nix hash for: ${url}`);
   const sha256 = await genNixHash(url);
   return {
     version: version.replace("v", ""),
     url,
-    arch: "x86_64-linux",
+    arch,
     sha256,
   };
 }
 
 async function genReleasesList(
   versions: string[],
-  x86_64LinuxUrls: string[],
+  releaseUrls: string[],
 ): Promise<SourceEntry[]> {
   const results: SourceEntry[] = [];
   const knownVersions = new Set(versions);
   Logger.debug(`Number of versions: ${knownVersions.size}`);
 
-  for (const url of x86_64LinuxUrls) {
+  for (const url of releaseUrls) {
     const sourceEntry = await sourceEntryfromUrl(url, knownVersions);
     if (sourceEntry !== null) {
       results.push(sourceEntry);
@@ -163,8 +227,9 @@ async function main(): Promise<void> {
   const denoInfo = await getAllReleases(OWNER, REPO);
   const versions = genListOfVersions(denoInfo);
   const urls = genListOfDownloadLinks(denoInfo);
-  const x86_64LinuxUrls = filterX86_64LinuxLinks(urls);
-  const releasesList = await genReleasesList(versions, x86_64LinuxUrls);
+  const supportedReleaseUrls = filterSupportedReleaseLinks(urls);
+  const releaseUrls = filterCompleteVersionReleaseLinks(supportedReleaseUrls);
+  const releasesList = await genReleasesList(versions, releaseUrls);
   await saveToJson({ deno: releasesList }, DESTINATION);
   Logger.info("Done!");
 }
