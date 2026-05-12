@@ -130,8 +130,8 @@ function filterSupportedReleaseLinks(urls: string[]): string[] {
 }
 
 function filterCompleteVersionReleaseLinks(urls: string[]): string[] {
-  const requiredArchitectures = new Set(
-    SUPPORTED_ARCHITECTURES.map((architecture) => architecture.nixArch),
+  const requiredArchitectures = SUPPORTED_ARCHITECTURES.map((architecture) =>
+    architecture.nixArch
   );
   const architectureMap = new Map<string, Set<SourceEntry["arch"]>>();
 
@@ -142,15 +142,18 @@ function filterCompleteVersionReleaseLinks(urls: string[]): string[] {
       continue;
     }
 
-    const archSet = architectureMap.get(version) ?? new Set<SourceEntry["arch"]>();
-    archSet.add(arch);
-    architectureMap.set(version, archSet);
+    const archSet = architectureMap.get(version);
+    if (archSet) {
+      archSet.add(arch);
+    } else {
+      architectureMap.set(version, new Set([arch]));
+    }
   }
 
   const completeVersions = new Set(
     Array.from(architectureMap.entries())
       .filter(([, arches]) =>
-        Array.from(requiredArchitectures).every((arch) => arches.has(arch))
+        requiredArchitectures.every((arch) => arches.has(arch))
       )
       .map(([version]) => version),
   );
