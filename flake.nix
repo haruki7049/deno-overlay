@@ -22,6 +22,8 @@
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
       ];
 
       imports = [
@@ -47,7 +49,7 @@
           };
 
           packages = {
-            default = pkgs.deno."0.36.0";
+            default = pkgs.deno."2.0.0";
           };
 
           checks = pkgs.deno;

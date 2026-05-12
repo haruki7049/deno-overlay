@@ -12,11 +12,13 @@
   pname ? "deno",
   version,
   url,
+  arch,
   sha256,
 }:
 
 let
-  canExecute = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
+  canExecute =
+    stdenv.buildPlatform.canExecute stdenv.hostPlatform && stdenv.hostPlatform.system == arch;
 in
 
 stdenv.mkDerivation (finalAttrs: {
@@ -26,8 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
   sourceRoot = ".";
 
   nativeBuildInputs = [
-    autoPatchelfHook
     unzip
+  ]
+  ++ lib.optionals stdenv.isLinux [
+    autoPatchelfHook
     libgcc
   ];
 
@@ -58,7 +62,11 @@ stdenv.mkDerivation (finalAttrs: {
     description = "A secure runtime for JavaScript and TypeScript";
     homepage = "https://deno.land/";
     mainProgram = "deno";
-    platforms = [ "x86_64-linux" ];
+    platforms = [
+      "x86_64-linux"
+      "aarch64-linux"
+      "aarch64-darwin"
+    ];
     license = lib.licenses.mit;
   };
 })

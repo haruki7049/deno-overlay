@@ -32,14 +32,17 @@ pkgs.mkShell {
 ## Architectures
 
 - x86_64-linux
+- aarch64-linux
+- aarch64-darwin
 
 ## A list of versions this overlay can support
 `;
 
 function getVersions(sources: Sources): string[] {
-  return Object.values(sources).flatMap((entries) =>
+  const versions = Object.values(sources).flatMap((entries) =>
     entries.map((entry) => entry.version)
   );
+  return Array.from(new Set(versions));
 }
 
 async function main(): Promise<void> {
