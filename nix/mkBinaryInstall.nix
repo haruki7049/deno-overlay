@@ -17,7 +17,8 @@
 }:
 
 let
-  canExecute = stdenv.buildPlatform.canExecute stdenv.hostPlatform && stdenv.hostPlatform.system == arch;
+  canExecute =
+    stdenv.buildPlatform.canExecute stdenv.hostPlatform && stdenv.hostPlatform.system == arch;
 in
 
 stdenv.mkDerivation (finalAttrs: {
@@ -26,12 +27,13 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchurl { inherit url sha256; };
   sourceRoot = ".";
 
-  nativeBuildInputs =
-    [ unzip ]
-    ++ lib.optionals stdenv.isLinux [
-      autoPatchelfHook
-      libgcc
-    ];
+  nativeBuildInputs = [
+    unzip
+  ]
+  ++ lib.optionals stdenv.isLinux [
+    autoPatchelfHook
+    libgcc
+  ];
 
   installPhase = ''
     mkdir -p $out/bin
