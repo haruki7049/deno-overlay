@@ -1,19 +1,21 @@
 name: fetching-releases
+
 on:
   schedule:
     - cron: '0 */12 * * *'
   workflow_dispatch:
+
 jobs:
   update-sources:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.2
-      - uses: cachix/install-nix-action@v26
+      - uses: actions/checkout@v6.0.2
+      - uses: cachix/install-nix-action@v31.0.6
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - run: nix-shell --run ./scripts/fetch-releases.ts --keep GITHUB_TOKEN
         env:
           GITHUB_TOKEN: ${{ github.token }}
-      - uses: stefanzweifel/git-auto-commit-action@v5.0.1
+      - uses: stefanzweifel/git-auto-commit-action@v7.1.0
         with:
           commit_message: "ci: Update sources.json"
