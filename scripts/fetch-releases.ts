@@ -142,11 +142,9 @@ function filterCompleteVersionReleaseLinks(urls: string[]): string[] {
       continue;
     }
 
-    if (!architectureMap.has(version)) {
-      architectureMap.set(version, new Set<SourceEntry["arch"]>());
-    }
-
-    architectureMap.get(version)!.add(arch);
+    const archSet = architectureMap.get(version) ?? new Set<SourceEntry["arch"]>();
+    archSet.add(arch);
+    architectureMap.set(version, archSet);
   }
 
   const completeVersions = new Set(
