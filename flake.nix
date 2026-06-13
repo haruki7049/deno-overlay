@@ -52,12 +52,7 @@
             default = pkgs.deno."2.0.0";
           };
 
-          checks = {
-            v1-42-0 = pkgs.deno."1.42.0";
-            v1-44-4 = pkgs.deno."1.44.0";
-            v2-0-0 = pkgs.deno."2.0.0";
-            v2-2-5 = pkgs.deno."2.2.5";
-          };
+          checks = pkgs.deno;
 
           treefmt = {
             projectRootFile = ".git/config";
