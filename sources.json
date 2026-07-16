@@ -1,6 +1,24 @@
 {
   "deno": [
     {
+      "version": "2.9.3",
+      "url": "https://github.com/denoland/deno/releases/download/v2.9.3/deno-aarch64-apple-darwin.zip",
+      "arch": "aarch64-darwin",
+      "sha256": "00r2900vb99pxgbh2bxhinhrmfxy4ga1iaqfc3cjipxnrvvp4a8v"
+    },
+    {
+      "version": "2.9.3",
+      "url": "https://github.com/denoland/deno/releases/download/v2.9.3/deno-aarch64-unknown-linux-gnu.zip",
+      "arch": "aarch64-linux",
+      "sha256": "12rcpiwlxymwfhzwkzls48d1k2dpnh7g1s16pnxnrdd4k3dkffbm"
+    },
+    {
+      "version": "2.9.3",
+      "url": "https://github.com/denoland/deno/releases/download/v2.9.3/deno-x86_64-unknown-linux-gnu.zip",
+      "arch": "x86_64-linux",
+      "sha256": "19pz2xvldxz1wg9y1zi7w6y89pw7gakc06dd11pybvfb85b8c0c1"
+    },
+    {
       "version": "2.9.2",
       "url": "https://github.com/denoland/deno/releases/download/v2.9.2/deno-aarch64-apple-darwin.zip",
       "arch": "aarch64-darwin",
