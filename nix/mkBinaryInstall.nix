@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     unzip
   ]
-  ++ lib.optionals stdenv.isLinux [
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     autoPatchelfHook
     libgcc
   ];
